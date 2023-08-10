@@ -51,6 +51,13 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'K_REQUESTED_CENTRE_C' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REQUESTED_CENTRE_C',
+    'width' => '10%',
+    'default' => true,
+  ),
   'DATE_ENTERED' => 
   array (
     'width' => '5%',

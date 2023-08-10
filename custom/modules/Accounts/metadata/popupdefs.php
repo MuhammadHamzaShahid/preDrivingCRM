@@ -11,6 +11,7 @@ $popupMeta = array (
   'phone_office' => 'accounts.phone_office',
   'k_license_c' => 'accounts.k_license_c',
   'k_select_centre_c' => 'accounts.k_select_centre_c',
+  'k_requested_centre_c' => 'accounts.k_requested_centre_c',
 ),
     'searchInputs' => array (
   0 => 'name',
@@ -20,6 +21,7 @@ $popupMeta = array (
   11 => 'phone_office',
   12 => 'k_license_c',
   13 => 'k_select_centre_c',
+  14 => 'k_requested_centre_c',
 ),
     'create' => array (
   'formBase' => 'AccountFormBase.php',
@@ -78,6 +80,13 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'k_select_centre_c',
   ),
+  'k_requested_centre_c' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REQUESTED_CENTRE_C',
+    'width' => '10%',
+    'name' => 'k_requested_centre_c',
+  ),
 ),
     'listviewdefs' => array (
   'NAME' => 
@@ -94,6 +103,7 @@ $popupMeta = array (
     'label' => 'LBL_K_GATEWAY_ID_C',
     'width' => '10%',
     'default' => true,
+    'name' => 'k_gateway_id_c',
   ),
   'K_PASSWORD_C' => 
   array (
@@ -101,6 +111,7 @@ $popupMeta = array (
     'label' => 'LBL_K_PASSWORD_C',
     'width' => '10%',
     'default' => true,
+    'name' => 'k_password_c',
   ),
   'EMAIL1' => 
   array (
@@ -113,6 +124,7 @@ $popupMeta = array (
     'label' => 'LBL_EMAIL',
     'width' => '10%',
     'default' => true,
+    'name' => 'email1',
   ),
   'PHONE_OFFICE' => 
   array (
@@ -120,6 +132,7 @@ $popupMeta = array (
     'label' => 'LBL_PHONE_OFFICE',
     'width' => '10%',
     'default' => true,
+    'name' => 'phone_office',
   ),
   'K_LICENSE_C' => 
   array (
@@ -127,11 +140,20 @@ $popupMeta = array (
     'label' => 'LBL_K_LICENSE_C',
     'width' => '10%',
     'default' => true,
+    'name' => 'k_license_c',
   ),
   'K_SELECT_CENTRE_C' => 
   array (
     'type' => 'enum',
     'label' => 'LBL_K_SELECT_CENTRE_C',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_select_centre_c',
+  ),
+  'K_REQUESTED_CENTRE_C' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REQUESTED_CENTRE_C',
     'width' => '10%',
     'default' => true,
   ),

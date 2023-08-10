@@ -82,6 +82,14 @@ array (
         'default' => true,
         'name' => 'k_select_centre_c',
       ),
+      'k_requested_centre_c' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_REQUESTED_CENTRE_C',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_requested_centre_c',
+      ),
     ),
   ),
   'templateMeta' => 
