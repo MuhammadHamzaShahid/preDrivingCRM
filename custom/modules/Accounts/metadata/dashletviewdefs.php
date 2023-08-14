@@ -4,7 +4,7 @@ $dashletData['AccountsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
-  'k_select_centre_c' => 
+  'k_password_c' => 
   array (
     'default' => '',
   ),
@@ -12,15 +12,11 @@ $dashletData['AccountsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
-  'k_license_c' => 
+  'email1' => 
   array (
     'default' => '',
   ),
-  'k_password_c' => 
-  array (
-    'default' => '',
-  ),
-  'date_entered' => 
+  'phone_office' => 
   array (
     'default' => '',
   ),
@@ -34,74 +30,34 @@ $dashletData['AccountsDashlet']['columns'] = array (
     'default' => true,
     'name' => 'name',
   ),
-  'phone_office' => 
+  'k_password_c' => 
   array (
-    'width' => '15%',
-    'label' => 'LBL_LIST_PHONE',
+    'type' => 'varchar',
+    'label' => 'LBL_K_PASSWORD_C',
+    'width' => '10%',
     'default' => true,
-    'name' => 'phone_office',
+    'name' => 'k_password_c',
   ),
   'k_gateway_id_c' => 
   array (
     'type' => 'varchar',
     'label' => 'LBL_K_GATEWAY_ID_C',
     'width' => '10%',
-    'default' => false,
+    'default' => true,
+    'name' => 'k_gateway_id_c',
   ),
   'email1' => 
   array (
     'width' => '8%',
     'label' => 'LBL_EMAIL_ADDRESS_PRIMARY',
     'name' => 'email1',
-    'default' => false,
+    'default' => true,
   ),
-  'k_license_c' => 
-  array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_LICENSE_C',
-    'width' => '10%',
-    'default' => false,
-  ),
-  'k_password_c' => 
-  array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_PASSWORD_C',
-    'width' => '10%',
-    'default' => false,
-  ),
-  'k_select_centre_c' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_SELECT_CENTRE_C',
-    'width' => '10%',
-    'default' => false,
-  ),
-  'date_entered' => 
+  'phone_office' => 
   array (
     'width' => '15%',
-    'label' => 'LBL_DATE_ENTERED',
-    'name' => 'date_entered',
-    'default' => false,
-  ),
-  'date_modified' => 
-  array (
-    'width' => '15%',
-    'label' => 'LBL_DATE_MODIFIED',
-    'name' => 'date_modified',
-    'default' => false,
-  ),
-  'created_by' => 
-  array (
-    'width' => '8%',
-    'label' => 'LBL_CREATED',
-    'name' => 'created_by',
-    'default' => false,
-  ),
-  'assigned_user_name' => 
-  array (
-    'width' => '8%',
-    'label' => 'LBL_LIST_ASSIGNED_USER',
-    'name' => 'assigned_user_name',
-    'default' => false,
+    'label' => 'LBL_LIST_PHONE',
+    'default' => true,
+    'name' => 'phone_office',
   ),
 );

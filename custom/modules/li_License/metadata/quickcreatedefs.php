@@ -1,18 +1,11 @@
 <?php
-$viewdefs ['Accounts'] = 
+$module_name = 'li_License';
+$viewdefs [$module_name] = 
 array (
   'QuickCreate' => 
   array (
     'templateMeta' => 
     array (
-      'form' => 
-      array (
-        'buttons' => 
-        array (
-          0 => 'SAVE',
-          1 => 'CANCEL',
-        ),
-      ),
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -27,17 +20,15 @@ array (
           'field' => '30',
         ),
       ),
-      'includes' => 
-      array (
-        0 => 
-        array (
-          'file' => 'modules/Accounts/Account.js',
-        ),
-      ),
       'useTabs' => false,
       'tabDefs' => 
       array (
-        'LBL_ACCOUNT_INFORMATION' => 
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_EDITVIEW_PANEL1' => 
         array (
           'newTab' => false,
           'panelDefault' => 'expanded',
@@ -46,41 +37,41 @@ array (
     ),
     'panels' => 
     array (
-      'lbl_account_information' => 
+      'default' => 
       array (
         0 => 
         array (
-          0 => 
-          array (
-            'name' => 'name',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
-          ),
+          0 => 'name',
+          1 => 'assigned_user_name',
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'k_gateway_id_c',
-            'label' => 'LBL_K_GATEWAY_ID_C',
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
           ),
           1 => 
           array (
-            'name' => 'k_password_c',
-            'label' => 'LBL_K_PASSWORD_C',
+            'name' => 'li_license_accounts_name',
+            'label' => 'LBL_LI_LICENSE_ACCOUNTS_FROM_ACCOUNTS_TITLE',
           ),
         ),
-        2 => 
+      ),
+      'lbl_editview_panel1' => 
+      array (
+        0 => 
         array (
           0 => 
           array (
-            'name' => 'email1',
+            'name' => 'k_select_centre_c',
+            'label' => 'LBL_K_SELECT_CENTRE_C',
           ),
           1 => 
           array (
-            'name' => 'phone_office',
+            'name' => 'k_requested_centre_c',
+            'label' => 'LBL_K_REQUESTED_CENTRE_C',
           ),
         ),
       ),

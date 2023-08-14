@@ -1,5 +1,5 @@
 <?php
-$app_list_strings['k_select_centre_list_dom'] = array(
+$app_list_strings['k_request_centre_list_dom'] = array(
 'Aberdeen North (Bridge of Don)'   => 'Aberdeen North (Bridge of Don)',
 'Aberdeen South (Cove)'   => 'Aberdeen South (Cove)',
 'Aberfeldy'   => 'Aberfeldy',

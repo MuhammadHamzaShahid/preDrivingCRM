@@ -88,28 +88,6 @@ array (
             'label' => 'LBL_PHONE_OFFICE',
           ),
         ),
-        3 => 
-        array (
-          0 => 
-          array (
-            'name' => 'k_license_c',
-            'label' => 'LBL_K_LICENSE_C',
-          ),
-          1 => '',
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'k_select_centre_c',
-            'label' => 'LBL_K_SELECT_CENTRE_C',
-          ),
-          1 => 
-          array (
-            'name' => 'k_requested_centre_c',
-            'label' => 'LBL_K_REQUESTED_CENTRE_C',
-          ),
-        ),
       ),
     ),
   ),

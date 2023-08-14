@@ -1,5 +1,6 @@
 <?php
-$searchdefs ['Accounts'] = 
+$module_name = 'li_License';
+$searchdefs [$module_name] = 
 array (
   'layout' => 
   array (
@@ -20,29 +21,31 @@ array (
         'default' => true,
         'width' => '10%',
       ),
-      'k_gateway_id_c' => 
+      'li_license_accounts_name' => 
       array (
-        'type' => 'varchar',
-        'label' => 'LBL_K_GATEWAY_ID_C',
+        'type' => 'relate',
+        'link' => true,
+        'label' => 'LBL_LI_LICENSE_ACCOUNTS_FROM_ACCOUNTS_TITLE',
+        'id' => 'LI_LICENSE_ACCOUNTSACCOUNTS_IDA',
         'width' => '10%',
         'default' => true,
-        'name' => 'k_gateway_id_c',
+        'name' => 'li_license_accounts_name',
       ),
-      'phone' => 
+      'k_select_centre_c' => 
       array (
-        'name' => 'phone',
-        'label' => 'LBL_ANY_PHONE',
-        'type' => 'name',
-        'default' => true,
+        'type' => 'enum',
+        'label' => 'LBL_K_SELECT_CENTRE_C',
         'width' => '10%',
+        'default' => true,
+        'name' => 'k_select_centre_c',
       ),
-      'email' => 
+      'k_requested_centre_c' => 
       array (
-        'name' => 'email',
-        'label' => 'LBL_ANY_EMAIL',
-        'type' => 'name',
-        'default' => true,
+        'type' => 'enum',
+        'label' => 'LBL_K_REQUESTED_CENTRE_C',
         'width' => '10%',
+        'default' => true,
+        'name' => 'k_requested_centre_c',
       ),
     ),
   ),
