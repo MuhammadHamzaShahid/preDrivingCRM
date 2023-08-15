@@ -28,11 +28,6 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-        'LBL_EDITVIEW_PANEL1' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
       ),
     ),
     'panels' => 
@@ -42,7 +37,11 @@ array (
         0 => 
         array (
           0 => 'name',
-          1 => 'assigned_user_name',
+          1 => 
+          array (
+            'name' => 'availability',
+            'label' => 'LBL_AVAILABILITY',
+          ),
         ),
         1 => 
         array (
@@ -58,10 +57,7 @@ array (
             'label' => 'LBL_LI_LICENSE_ACCOUNTS_FROM_ACCOUNTS_TITLE',
           ),
         ),
-      ),
-      'lbl_editview_panel1' => 
-      array (
-        0 => 
+        2 => 
         array (
           0 => 
           array (

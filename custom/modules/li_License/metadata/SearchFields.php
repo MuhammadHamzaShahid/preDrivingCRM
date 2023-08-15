@@ -1,5 +1,5 @@
 <?php
-// created: 2023-08-14 18:37:07
+// created: 2023-08-15 09:59:54
 $searchFields['li_License'] = array (
   'name' => 
   array (

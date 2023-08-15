@@ -4,6 +4,10 @@ $dashletData['li_LicenseDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'availability' => 
+  array (
+    'default' => '',
+  ),
   'li_license_accounts_name' => 
   array (
     'default' => '',
@@ -26,6 +30,13 @@ $dashletData['li_LicenseDashlet']['columns'] = array (
     'default' => true,
     'name' => 'name',
   ),
+  'availability' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_AVAILABILITY',
+    'width' => '10%',
+    'default' => true,
+  ),
   'li_license_accounts_name' => 
   array (
     'type' => 'relate',
@@ -34,6 +45,7 @@ $dashletData['li_LicenseDashlet']['columns'] = array (
     'id' => 'LI_LICENSE_ACCOUNTSACCOUNTS_IDA',
     'width' => '10%',
     'default' => true,
+    'name' => 'li_license_accounts_name',
   ),
   'k_select_centre_c' => 
   array (
