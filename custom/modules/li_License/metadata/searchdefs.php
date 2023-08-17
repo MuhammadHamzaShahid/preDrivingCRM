@@ -12,6 +12,14 @@ array (
         'default' => true,
         'width' => '10%',
       ),
+      'theory' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_THEORY',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'theory',
+      ),
     ),
     'advanced_search' => 
     array (
@@ -21,13 +29,13 @@ array (
         'default' => true,
         'width' => '10%',
       ),
-      'availability' => 
+      'theory' => 
       array (
-        'type' => 'enum',
-        'label' => 'LBL_AVAILABILITY',
+        'type' => 'varchar',
+        'label' => 'LBL_THEORY',
         'width' => '10%',
         'default' => true,
-        'name' => 'availability',
+        'name' => 'theory',
       ),
       'li_license_accounts_name' => 
       array (
@@ -54,22 +62,6 @@ array (
         'width' => '10%',
         'default' => true,
         'name' => 'k_requested_centre_c',
-      ),
-      'date_entered' => 
-      array (
-        'type' => 'datetime',
-        'label' => 'LBL_DATE_ENTERED',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'date_entered',
-      ),
-      'date_modified' => 
-      array (
-        'type' => 'datetime',
-        'label' => 'LBL_DATE_MODIFIED',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'date_modified',
       ),
     ),
   ),

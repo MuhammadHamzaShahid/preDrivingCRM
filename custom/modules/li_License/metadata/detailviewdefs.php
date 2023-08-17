@@ -56,7 +56,11 @@ array (
         ),
         1 => 
         array (
-          0 => 'description',
+          0 => 
+          array (
+            'name' => 'theory',
+            'label' => 'LBL_THEORY',
+          ),
           1 => 
           array (
             'name' => 'li_license_accounts_name',
@@ -89,6 +93,11 @@ array (
             'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
             'label' => 'LBL_DATE_MODIFIED',
           ),
+        ),
+        4 => 
+        array (
+          0 => 'description',
+          1 => '',
         ),
       ),
     ),

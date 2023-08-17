@@ -46,7 +46,11 @@ array (
         ),
         1 => 
         array (
-          0 => 'description',
+          0 => 
+          array (
+            'name' => 'theory',
+            'label' => 'LBL_THEORY',
+          ),
           1 => 
           array (
             'name' => 'li_license_accounts_name',
@@ -64,6 +68,11 @@ array (
             'name' => 'k_requested_centre_c',
             'label' => 'LBL_K_REQUESTED_CENTRE_C',
           ),
+        ),
+        3 => 
+        array (
+          0 => 'description',
+          1 => '',
         ),
       ),
     ),

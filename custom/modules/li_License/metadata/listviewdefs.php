@@ -9,6 +9,13 @@ array (
     'default' => true,
     'link' => true,
   ),
+  'THEORY' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_THEORY',
+    'width' => '10%',
+    'default' => true,
+  ),
   'AVAILABILITY' => 
   array (
     'type' => 'enum',
