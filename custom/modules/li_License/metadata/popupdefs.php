@@ -8,18 +8,36 @@ $popupMeta = array (
   'li_license_accounts_name' => 'li_license.li_license_accounts_name',
   'k_select_centre_c' => 'li_license.k_select_centre_c',
   'k_requested_centre_c' => 'li_license.k_requested_centre_c',
+  'theory' => 'li_license.theory',
+  'availability' => 'li_license.availability',
 ),
     'searchInputs' => array (
   1 => 'name',
   4 => 'li_license_accounts_name',
   5 => 'k_select_centre_c',
   6 => 'k_requested_centre_c',
+  7 => 'theory',
+  8 => 'availability',
 ),
     'searchdefs' => array (
   'name' => 
   array (
     'name' => 'name',
     'width' => '10%',
+  ),
+  'theory' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_THEORY',
+    'width' => '10%',
+    'name' => 'theory',
+  ),
+  'availability' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_AVAILABILITY',
+    'width' => '10%',
+    'name' => 'availability',
   ),
   'li_license_accounts_name' => 
   array (
@@ -43,6 +61,76 @@ $popupMeta = array (
     'label' => 'LBL_K_REQUESTED_CENTRE_C',
     'width' => '10%',
     'name' => 'k_requested_centre_c',
+  ),
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+    'name' => 'name',
+  ),
+  'THEORY' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_THEORY',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'theory',
+  ),
+  'LI_LICENSE_ACCOUNTS_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_ACCOUNTS_FROM_ACCOUNTS_TITLE',
+    'id' => 'LI_LICENSE_ACCOUNTSACCOUNTS_IDA',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'li_license_accounts_name',
+  ),
+  'AVAILABILITY' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_AVAILABILITY',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'availability',
+  ),
+  'K_SELECT_CENTRE_C' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_SELECT_CENTRE_C',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_select_centre_c',
+  ),
+  'K_REQUESTED_CENTRE_C' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_REQUESTED_CENTRE_C',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_requested_centre_c',
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'created_by_name',
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'date_modified',
   ),
 ),
 );

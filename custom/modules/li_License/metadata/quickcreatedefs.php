@@ -47,9 +47,8 @@ array (
         array (
           0 => 
           array (
-            'name' => 'description',
-            'comment' => 'Full text of the note',
-            'label' => 'LBL_DESCRIPTION',
+            'name' => 'theory',
+            'label' => 'LBL_THEORY',
           ),
           1 => 
           array (
@@ -69,6 +68,16 @@ array (
             'name' => 'k_requested_centre_c',
             'label' => 'LBL_K_REQUESTED_CENTRE_C',
           ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
+          ),
+          1 => '',
         ),
       ),
     ),

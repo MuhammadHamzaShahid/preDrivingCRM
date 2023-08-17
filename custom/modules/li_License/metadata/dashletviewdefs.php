@@ -4,6 +4,10 @@ $dashletData['li_LicenseDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'theory' => 
+  array (
+    'default' => '',
+  ),
   'availability' => 
   array (
     'default' => '',
@@ -30,12 +34,20 @@ $dashletData['li_LicenseDashlet']['columns'] = array (
     'default' => true,
     'name' => 'name',
   ),
+  'theory' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_THEORY',
+    'width' => '10%',
+    'default' => true,
+  ),
   'availability' => 
   array (
     'type' => 'enum',
     'label' => 'LBL_AVAILABILITY',
     'width' => '10%',
     'default' => true,
+    'name' => 'availability',
   ),
   'li_license_accounts_name' => 
   array (
