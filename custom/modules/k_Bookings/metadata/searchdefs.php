@@ -41,6 +41,14 @@ array (
         'default' => true,
         'name' => 'k_license_no',
       ),
+      'k_driving_test_ref_no' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_DRIVING_TEST_REF_NO',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_driving_test_ref_no',
+      ),
       'k_buyer_name' => 
       array (
         'type' => 'varchar',
@@ -58,26 +66,6 @@ array (
         'width' => '10%',
         'default' => true,
         'name' => 'contacts_name',
-      ),
-      'accounts_name' => 
-      array (
-        'type' => 'relate',
-        'link' => true,
-        'label' => 'LBL_ACCOUNTS_NAME',
-        'id' => 'ACCOUNTS_ID',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'accounts_name',
-      ),
-      'li_license_name' => 
-      array (
-        'type' => 'relate',
-        'link' => true,
-        'label' => 'LBL_LI_LICENSE_NAME',
-        'id' => 'LI_LICENSE_ID',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'li_license_name',
       ),
       'assigned_user_id' => 
       array (

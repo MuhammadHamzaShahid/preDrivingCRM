@@ -197,22 +197,9 @@ array (
             'name' => 'reminder',
             'label' => 'LBL_REMINDER',
           ),
-          1 => 
-          array (
-            'name' => 'li_license_name',
-            'label' => 'LBL_LI_LICENSE_NAME',
-          ),
-        ),
-        7 => 
-        array (
-          0 => 
-          array (
-            'name' => 'accounts_name',
-            'label' => 'LBL_ACCOUNTS_NAME',
-          ),
           1 => 'assigned_user_name',
         ),
-        8 => 
+        7 => 
         array (
           0 => 'description',
           1 => '',

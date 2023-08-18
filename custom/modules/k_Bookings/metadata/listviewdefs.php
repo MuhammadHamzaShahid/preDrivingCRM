@@ -9,26 +9,10 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'ACCOUNTS_NAME' => 
-  array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_ACCOUNTS_NAME',
-    'id' => 'ACCOUNTS_ID',
-    'width' => '10%',
-    'default' => true,
-  ),
   'K_LICENSE_NO' => 
   array (
     'type' => 'varchar',
     'label' => 'LBL_K_LICENSE_NO',
-    'width' => '10%',
-    'default' => true,
-  ),
-  'K_BUYER_NAME' => 
-  array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_BUYER_NAME',
     'width' => '10%',
     'default' => true,
   ),
@@ -39,11 +23,26 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'K_BUYER_NAME' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_BUYER_NAME',
+    'width' => '10%',
+    'default' => true,
+  ),
   'K_DATE_AND_TIME' => 
   array (
     'type' => 'datetime',
     'label' => 'LBL_K_DATE_AND_TIME',
     'width' => '10%',
+    'default' => true,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '9%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
     'default' => true,
   ),
 );
