@@ -9,4 +9,6 @@ $dictionary['Contact']['fields']['buyer_type'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
+
 );

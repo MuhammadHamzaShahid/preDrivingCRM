@@ -8,4 +8,5 @@ $dictionary['k_Bookings']['fields']['k_test_detail'] = array(
     'cols'=>"80",
     'len' => '255',
     'required' => true,
+    'audited' => true,
 );

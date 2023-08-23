@@ -5,4 +5,5 @@ $dictionary['k_Bookings']['fields']['commission'] = array(
     'vname' => 'LBL_COMMISSION',
     'type' => 'varchar',
     'len' => '255',
+    'audited' => true,
 );

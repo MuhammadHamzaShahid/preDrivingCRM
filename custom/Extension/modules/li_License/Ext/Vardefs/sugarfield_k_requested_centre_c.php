@@ -6,4 +6,6 @@ $dictionary['li_License']['fields']['k_requested_centre_c'] = array(
 	'type' => 'enum',
 	'options' => 'k_request_centre_list_dom',
 	'searchable' => true,
+	'audited' => true,
+
 );

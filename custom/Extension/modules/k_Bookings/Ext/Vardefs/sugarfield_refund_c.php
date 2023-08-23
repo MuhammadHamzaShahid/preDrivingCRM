@@ -7,4 +7,5 @@ $dictionary['k_Bookings']['fields']['refund'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
 );

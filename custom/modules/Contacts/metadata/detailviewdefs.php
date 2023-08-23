@@ -206,6 +206,11 @@ array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
           ),
+          1 => 
+          array (
+            'name' => 'li_license_name',
+            'label' => 'LBL_LI_LICENSE_NAME',
+          ),
         ),
         5 => 
         array (
@@ -235,6 +240,15 @@ array (
             'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
             'label' => 'LBL_DATE_MODIFIED',
           ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+          1 => '',
         ),
       ),
     ),

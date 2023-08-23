@@ -9,4 +9,5 @@ $dictionary["Account"]["fields"]["li_license_accounts"] = array (
   'bean_name' => 'li_License',
   'side' => 'right',
   'vname' => 'LBL_LI_LICENSE_ACCOUNTS_FROM_LI_LICENSE_TITLE',
+  'audited' => true,
 );

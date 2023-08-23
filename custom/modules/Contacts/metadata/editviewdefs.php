@@ -114,6 +114,11 @@ array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
           ),
+          1 => 
+          array (
+            'name' => 'li_license_name',
+            'label' => 'LBL_LI_LICENSE_NAME',
+          ),
         ),
         5 => 
         array (
@@ -127,6 +132,30 @@ array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+          1 => 
+          array (
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'label' => 'LBL_DATE_MODIFIED',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+          1 => '',
         ),
       ),
     ),

@@ -4,4 +4,5 @@ $dictionary['Account']['fields']['k_password_c'] = array(
 	'vname' => 'LBL_K_PASSWORD_C',
 	'required' => true,
 	'type' => 'varchar',
+	'audited' => true,
 );

@@ -10,7 +10,7 @@ $dictionary['Contact']['fields']['li_license_id'] = array(
     'module' => 'li_License',
     'dbType' => 'id',
     'reportable' => true,
-    'audited' => true,
+    'audited' => false,
     'duplicate_merge' => 'disabled',
     'required' => false,
 );
@@ -27,6 +27,8 @@ $dictionary['Contact']['fields']['li_license_name'] = array(
     'module' => 'li_License',
     'source' => 'non-db',
     'required' => false,
+    'audited' => true,
+    
 );
 //link
 $dictionary['Contact']['fields']['contacts_li_license_link'] = array(

@@ -10,7 +10,6 @@ $dictionary['k_Bookings']['fields']['li_license_id'] = array(
     'module' => 'li_License',
     'dbType' => 'id',
     'reportable' => true,
-    'audited' => true,
     'duplicate_merge' => 'disabled',
     'required' => false,
 );
@@ -27,6 +26,7 @@ $dictionary['k_Bookings']['fields']['li_license_name'] = array(
     'module' => 'li_License',
     'source' => 'non-db',
     'required' => false,
+    'audited' => true,
 );
 //link
 $dictionary['k_Bookings']['fields']['k_bookings_li_license_link'] = array(

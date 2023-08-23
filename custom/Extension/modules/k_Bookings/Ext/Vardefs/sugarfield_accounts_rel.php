@@ -10,7 +10,6 @@ $dictionary['k_Bookings']['fields']['accounts_id'] = array(
     'module' => 'Accounts',
     'dbType' => 'id',
     'reportable' => true,
-    'audited' => true,
     'duplicate_merge' => 'disabled',
     'required' => false,
 );
@@ -27,6 +26,7 @@ $dictionary['k_Bookings']['fields']['accounts_name'] = array(
     'module' => 'Accounts',
     'source' => 'non-db',
     'required' => false,
+    'audited' => true,
 );
 //link
 $dictionary['k_Bookings']['fields']['k_bookings_accounts_link'] = array(

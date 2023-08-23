@@ -7,4 +7,5 @@ $dictionary['k_Bookings']['fields']['test_days'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
 );

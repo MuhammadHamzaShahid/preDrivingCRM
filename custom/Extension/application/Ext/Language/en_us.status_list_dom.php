@@ -1,8 +1,8 @@
 <?php
    $app_list_strings['status_list'] = array(
       '' => '',
-      'Scheduled' => 'Scheduled',
+      'Direct' => 'Direct',
       'Cancelled' => 'Cancelled',
       'Confirmed' => 'Confirmed',
-      'Swap' => 'Swap',
+      'On Hold' => 'On Hold',
     );
