@@ -5,4 +5,5 @@ $dictionary['k_Bookings']['fields']['k_buyer_name'] = array(
     'vname' => 'LBL_K_BUYER_NAME',
     'type' => 'varchar',
     'len' => '255',
+    'audited' => true,
 );

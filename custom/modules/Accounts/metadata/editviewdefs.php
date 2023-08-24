@@ -60,13 +60,19 @@ array (
               'required' => true,
             ),
           ),
+          1 => 
+          array (
+            'name' => 'k_gateway_id_c',
+            'label' => 'LBL_K_GATEWAY_ID_C',
+          ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'k_gateway_id_c',
-            'label' => 'LBL_K_GATEWAY_ID_C',
+            'name' => 'email1',
+            'studio' => 'false',
+            'label' => 'LBL_EMAIL',
           ),
           1 => 
           array (
@@ -78,14 +84,28 @@ array (
         array (
           0 => 
           array (
-            'name' => 'email1',
-            'studio' => 'false',
-            'label' => 'LBL_EMAIL',
+            'name' => 'phone_office',
+            'label' => 'LBL_PHONE_OFFICE',
           ),
           1 => 
           array (
-            'name' => 'phone_office',
-            'label' => 'LBL_PHONE_OFFICE',
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'label' => 'LBL_DATE_MODIFIED',
+          ),
+          1 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
           ),
         ),
       ),

@@ -4,4 +4,5 @@ $dictionary['k_Bookings']['fields']['k_last_date'] = array(
     'vname' => 'LBL_K_LAST_DATE',
     'type' => 'date',
     'required' => false,
+    'audited' => true,
 );

@@ -23,5 +23,6 @@ $mod_strings['LBL_K_CANDIDATE_NAME'] = 'Candidate Name';
 $mod_strings['LBL_K_TEST_CENTER'] = 'Test Center';
 $mod_strings['LBL_K_DRIVING_TEST_REF_NO'] = 'Driving Test Reference No';
 $mod_strings['LBL_K_BUYER_NAME'] = 'Buyer Name';
+$mod_strings['LBL_K_SWAP'] = 'Swap';
 
 

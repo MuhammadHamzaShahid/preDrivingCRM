@@ -21,6 +21,8 @@ $dictionary["li_License"]["fields"]["li_license_accounts_name"] = array (
   'table' => 'accounts',
   'module' => 'Accounts',
   'rname' => 'name',
+  'audited' => true,
+
 );
 $dictionary["li_License"]["fields"]["li_license_accountsaccounts_ida"] = array (
   'name' => 'li_license_accountsaccounts_ida',

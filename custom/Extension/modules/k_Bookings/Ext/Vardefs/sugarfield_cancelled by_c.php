@@ -5,4 +5,5 @@ $dictionary['k_Bookings']['fields']['cancelled_by'] = array(
     'type' => 'enum',
     'options' => 'cancelled_by_list',
     'required' => false,
+    'audited' => true,
 );

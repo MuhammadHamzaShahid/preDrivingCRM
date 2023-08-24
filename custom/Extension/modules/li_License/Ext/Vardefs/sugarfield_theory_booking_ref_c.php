@@ -6,4 +6,6 @@ $dictionary['li_License']['fields']['theory'] = array(
     'type' => 'varchar',
     'len' => '255',
     'Required' => false,
+    'audited' => true,
+
 );

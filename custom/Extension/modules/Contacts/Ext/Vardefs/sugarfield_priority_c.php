@@ -8,4 +8,5 @@ $dictionary['Contact']['fields']['priority'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
 );

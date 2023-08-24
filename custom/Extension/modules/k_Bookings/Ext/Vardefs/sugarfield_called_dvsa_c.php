@@ -5,4 +5,5 @@ $dictionary['k_Bookings']['fields']['cancelled_dvsa'] = array(
     'type' => 'enum',
     'options' => 'dvsa_list',
     'required' => false,
+    'audited' => true,
 );

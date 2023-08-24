@@ -4,20 +4,20 @@ $popupMeta = array (
     'varName' => 'k_Bookings',
     'orderBy' => 'k_bookings.name',
     'whereClauses' => array (
-  'accounts_name' => 'k_bookings.accounts_name',
   'contacts_name' => 'k_bookings.contacts_name',
-  'li_license_name' => 'k_bookings.li_license_name',
-  'assigned_user_id' => 'k_bookings.assigned_user_id',
   'k_candidate_name' => 'k_bookings.k_candidate_name',
   'k_license_no' => 'k_bookings.k_license_no',
+  'k_driving_test_ref_no' => 'k_bookings.k_driving_test_ref_no',
+  'k_buyer_name' => 'k_bookings.k_buyer_name',
+  'assigned_user_name' => 'k_bookings.assigned_user_name',
 ),
     'searchInputs' => array (
-  4 => 'accounts_name',
   5 => 'contacts_name',
-  6 => 'li_license_name',
-  7 => 'assigned_user_id',
   8 => 'k_candidate_name',
   9 => 'k_license_no',
+  10 => 'k_driving_test_ref_no',
+  11 => 'k_buyer_name',
+  12 => 'assigned_user_name',
 ),
     'searchdefs' => array (
   'k_candidate_name' => 
@@ -34,14 +34,19 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'k_license_no',
   ),
-  'accounts_name' => 
+  'k_driving_test_ref_no' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_ACCOUNTS_NAME',
-    'id' => 'ACCOUNTS_ID',
+    'type' => 'varchar',
+    'label' => 'LBL_K_DRIVING_TEST_REF_NO',
     'width' => '10%',
-    'name' => 'accounts_name',
+    'name' => 'k_driving_test_ref_no',
+  ),
+  'k_buyer_name' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_BUYER_NAME',
+    'width' => '10%',
+    'name' => 'k_buyer_name',
   ),
   'contacts_name' => 
   array (
@@ -52,29 +57,14 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'contacts_name',
   ),
-  'li_license_name' => 
+  'assigned_user_name' => 
   array (
-    'type' => 'relate',
     'link' => true,
-    'label' => 'LBL_LI_LICENSE_NAME',
-    'id' => 'LI_LICENSE_ID',
+    'type' => 'relate',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'id' => 'ASSIGNED_USER_ID',
     'width' => '10%',
-    'name' => 'li_license_name',
-  ),
-  'assigned_user_id' => 
-  array (
-    'name' => 'assigned_user_id',
-    'label' => 'LBL_ASSIGNED_TO',
-    'type' => 'enum',
-    'function' => 
-    array (
-      'name' => 'get_user_array',
-      'params' => 
-      array (
-        0 => false,
-      ),
-    ),
-    'width' => '10%',
+    'name' => 'assigned_user_name',
   ),
 ),
     'listviewdefs' => array (
@@ -86,16 +76,6 @@ $popupMeta = array (
     'default' => true,
     'name' => 'k_candidate_name',
   ),
-  'LI_LICENSE_NAME' => 
-  array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_LI_LICENSE_NAME',
-    'id' => 'LI_LICENSE_ID',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'li_license_name',
-  ),
   'K_LICENSE_NO' => 
   array (
     'type' => 'varchar',
@@ -104,23 +84,21 @@ $popupMeta = array (
     'default' => true,
     'name' => 'k_license_no',
   ),
-  'ACCOUNTS_NAME' => 
+  'K_DRIVING_TEST_REF_NO' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_ACCOUNTS_NAME',
-    'id' => 'ACCOUNTS_ID',
+    'type' => 'varchar',
+    'label' => 'LBL_K_DRIVING_TEST_REF_NO',
     'width' => '10%',
     'default' => true,
-    'name' => 'accounts_name',
+    'name' => 'k_driving_test_ref_no',
   ),
-  'STATUS' => 
+  'K_BUYER_NAME' => 
   array (
-    'type' => 'enum',
-    'label' => 'LBL_STATUS',
+    'type' => 'varchar',
+    'label' => 'LBL_K_BUYER_NAME',
     'width' => '10%',
     'default' => true,
-    'name' => 'status',
+    'name' => 'k_buyer_name',
   ),
   'CONTACTS_NAME' => 
   array (

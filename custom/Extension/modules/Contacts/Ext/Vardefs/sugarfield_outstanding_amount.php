@@ -5,4 +5,5 @@ $dictionary['Contact']['fields']['amount'] = array(
     'vname' => 'LBL_AMOUNT',
     'type' => 'varchar',
     'len' => '255',
+    'audited' => true,
 );

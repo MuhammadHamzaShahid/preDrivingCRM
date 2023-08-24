@@ -9,4 +9,5 @@ $dictionary['Contact']['fields']['payment_type'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
 );

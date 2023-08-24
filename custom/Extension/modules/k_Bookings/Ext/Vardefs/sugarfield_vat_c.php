@@ -8,4 +8,5 @@ $dictionary['k_Bookings']['fields']['vat'] = array(
     'default' => '',
     'massupdate' => false,
     'required' => false,
+    'audited' => true,
 );
