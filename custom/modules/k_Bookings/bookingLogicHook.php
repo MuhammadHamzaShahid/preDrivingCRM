@@ -24,7 +24,7 @@ class bookingLogicHookClass
                 $dateTimeF= date('Y-m-d H:i:s',strtotime($dateTime)); 
 
             // Putting the trimmed values in their respective fields
-                $bean->k_candidate_name = $candidateName;
+                $bean->name = $candidateName;
                 $bean->k_license_no = $drivingLicenseNumber;
                 $bean->k_test_center = $testCenter;
                 $bean->k_date_and_time = $dateTimeF;
