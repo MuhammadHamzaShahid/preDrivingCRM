@@ -46,11 +46,7 @@ array (
             'name' => 'k_test_detail',
             'label' => 'LBL_K_TEST_DETAIL',
           ),
-          1 => 
-          array (
-            'name' => 'k_candidate_name',
-            'label' => 'LBL_K_CANDIDATE_NAME',
-          ),
+          1 => 'name',
         ),
         1 => 
         array (

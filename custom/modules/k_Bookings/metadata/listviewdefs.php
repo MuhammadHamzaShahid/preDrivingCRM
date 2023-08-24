@@ -2,12 +2,12 @@
 $module_name = 'k_Bookings';
 $listViewDefs [$module_name] = 
 array (
-  'K_CANDIDATE_NAME' => 
+  'NAME' => 
   array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_CANDIDATE_NAME',
-    'width' => '10%',
+    'width' => '32%',
+    'label' => 'LBL_NAME',
     'default' => true,
+    'link' => true,
   ),
   'K_LICENSE_NO' => 
   array (
