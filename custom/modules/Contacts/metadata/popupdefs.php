@@ -4,8 +4,6 @@ $popupMeta = array (
     'varName' => 'CONTACT',
     'orderBy' => 'contacts.first_name, contacts.last_name',
     'whereClauses' => array (
-  'first_name' => 'contacts.first_name',
-  'last_name' => 'contacts.last_name',
   'phone_mobile' => 'contacts.phone_mobile',
   'email' => 'contacts.email',
   'assigned_user_id' => 'contacts.assigned_user_id',
@@ -14,10 +12,14 @@ $popupMeta = array (
   'amount' => 'contacts.amount',
   'payment_type' => 'contacts.payment_type',
   'account_name' => 'contacts.account_name',
+  'name' => 'contacts.name',
+  'date_entered' => 'contacts.date_entered',
+  'date_modified' => 'contacts.date_modified',
+  'created_by_name' => 'contacts.created_by_name',
+  'assigned_user_name' => 'contacts.assigned_user_name',
+  'li_license_name' => 'contacts.li_license_name',
 ),
     'searchInputs' => array (
-  0 => 'first_name',
-  1 => 'last_name',
   3 => 'email',
   4 => 'phone_mobile',
   5 => 'assigned_user_id',
@@ -26,6 +28,12 @@ $popupMeta = array (
   9 => 'amount',
   10 => 'payment_type',
   11 => 'account_name',
+  12 => 'name',
+  13 => 'date_entered',
+  14 => 'date_modified',
+  15 => 'created_by_name',
+  16 => 'assigned_user_name',
+  17 => 'li_license_name',
 ),
     'create' => array (
   'formBase' => 'ContactFormBase.php',
@@ -39,15 +47,13 @@ $popupMeta = array (
   'createButton' => 'LNK_NEW_CONTACT',
 ),
     'searchdefs' => array (
-  'first_name' => 
+  'name' => 
   array (
-    'name' => 'first_name',
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
     'width' => '10%',
-  ),
-  'last_name' => 
-  array (
-    'name' => 'last_name',
-    'width' => '10%',
+    'name' => 'name',
   ),
   'phone_mobile' => 
   array (
@@ -82,6 +88,15 @@ $popupMeta = array (
     'type' => 'varchar',
     'width' => '10%',
   ),
+  'li_license_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_NAME',
+    'id' => 'LI_LICENSE_ID',
+    'width' => '10%',
+    'name' => 'li_license_name',
+  ),
   'buyer_type' => 
   array (
     'type' => 'enum',
@@ -110,21 +125,55 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'payment_type',
   ),
+  'date_entered' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'name' => 'date_entered',
+  ),
+  'date_modified' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'name' => 'date_modified',
+  ),
+  'created_by_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'name' => 'created_by_name',
+  ),
+  'assigned_user_name' => 
+  array (
+    'link' => true,
+    'type' => 'relate',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'id' => 'ASSIGNED_USER_ID',
+    'width' => '10%',
+    'name' => 'assigned_user_name',
+  ),
 ),
     'listviewdefs' => array (
-  'FIRST_NAME' => 
+  'NAME' => 
   array (
-    'type' => 'varchar',
-    'label' => 'LBL_FIRST_NAME',
-    'width' => '10%',
+    'width' => '20%',
+    'label' => 'LBL_LIST_NAME',
+    'link' => true,
     'default' => true,
-  ),
-  'LAST_NAME' => 
-  array (
-    'type' => 'varchar',
-    'label' => 'LBL_LAST_NAME',
-    'width' => '10%',
-    'default' => true,
+    'related_fields' => 
+    array (
+      0 => 'first_name',
+      1 => 'last_name',
+      2 => 'salutation',
+      3 => 'account_name',
+      4 => 'account_id',
+    ),
+    'name' => 'name',
   ),
   'PHONE_MOBILE' => 
   array (
@@ -132,6 +181,7 @@ $popupMeta = array (
     'label' => 'LBL_MOBILE_PHONE',
     'width' => '10%',
     'default' => true,
+    'name' => 'phone_mobile',
   ),
   'EMAIL1' => 
   array (
@@ -146,6 +196,7 @@ $popupMeta = array (
     'label' => 'LBL_EMAIL_ADDRESS',
     'width' => '10%',
     'default' => true,
+    'name' => 'email1',
   ),
   'ACCOUNT_NAME' => 
   array (
@@ -162,12 +213,22 @@ $popupMeta = array (
     ),
     'name' => 'account_name',
   ),
+  'LI_LICENSE_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_NAME',
+    'id' => 'LI_LICENSE_ID',
+    'width' => '10%',
+    'default' => true,
+  ),
   'BUYER_TYPE' => 
   array (
     'type' => 'enum',
     'default' => true,
     'label' => 'LBL_BUYER_TYPE',
     'width' => '10%',
+    'name' => 'buyer_type',
   ),
   'PRIORITY' => 
   array (
@@ -175,6 +236,7 @@ $popupMeta = array (
     'default' => true,
     'label' => 'LBL_PRIORITY',
     'width' => '10%',
+    'name' => 'priority',
   ),
   'AMOUNT' => 
   array (
@@ -182,6 +244,7 @@ $popupMeta = array (
     'label' => 'LBL_AMOUNT',
     'width' => '10%',
     'default' => true,
+    'name' => 'amount',
   ),
   'PAYMENT_TYPE' => 
   array (
@@ -189,6 +252,7 @@ $popupMeta = array (
     'default' => true,
     'label' => 'LBL_PAYMENT_TYPE',
     'width' => '10%',
+    'name' => 'payment_type',
   ),
   'ASSIGNED_USER_NAME' => 
   array (
@@ -196,6 +260,30 @@ $popupMeta = array (
     'type' => 'relate',
     'label' => 'LBL_ASSIGNED_TO_NAME',
     'id' => 'ASSIGNED_USER_ID',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'assigned_user_name',
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
     'width' => '10%',
     'default' => true,
   ),

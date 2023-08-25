@@ -62,8 +62,8 @@ array (
           ),
           1 => 
           array (
-            'name' => 'k_gateway_id_c',
-            'label' => 'LBL_K_GATEWAY_ID_C',
+            'name' => 'phone_office',
+            'label' => 'LBL_PHONE_OFFICE',
           ),
         ),
         1 => 
@@ -84,8 +84,8 @@ array (
         array (
           0 => 
           array (
-            'name' => 'phone_office',
-            'label' => 'LBL_PHONE_OFFICE',
+            'name' => 'k_gateway_id_c',
+            'label' => 'LBL_K_GATEWAY_ID_C',
           ),
           1 => 
           array (
@@ -106,6 +106,19 @@ array (
           array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'label' => 'LBL_DESCRIPTION',
+          ),
+          1 => 
+          array (
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO',
           ),
         ),
       ),

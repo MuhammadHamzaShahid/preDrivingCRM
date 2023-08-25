@@ -1,6 +1,6 @@
 <?php
 $dashletData['k_BookingsDashlet']['searchFields'] = array (
-  'k_candidate_name' => 
+  'name' => 
   array (
     'default' => '',
   ),
@@ -12,7 +12,103 @@ $dashletData['k_BookingsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'k_last_date' => 
+  array (
+    'default' => '',
+  ),
+  'confirmation_reminder' => 
+  array (
+    'default' => '',
+  ),
+  'vat' => 
+  array (
+    'default' => '',
+  ),
+  'total' => 
+  array (
+    'default' => '',
+  ),
+  'test_fee' => 
+  array (
+    'default' => '',
+  ),
+  'test_days' => 
+  array (
+    'default' => '',
+  ),
+  'status' => 
+  array (
+    'default' => '',
+  ),
+  'reminder' => 
+  array (
+    'default' => '',
+  ),
+  'refund' => 
+  array (
+    'default' => '',
+  ),
+  'li_license_name' => 
+  array (
+    'default' => '',
+  ),
+  'k_test_detail' => 
+  array (
+    'default' => '',
+  ),
+  'k_test_center' => 
+  array (
+    'default' => '',
+  ),
+  'k_swap' => 
+  array (
+    'default' => '',
+  ),
+  'k_date_and_time' => 
+  array (
+    'default' => '',
+  ),
+  'days_to_pay' => 
+  array (
+    'default' => '',
+  ),
+  'discount' => 
+  array (
+    'default' => '',
+  ),
+  'contacts_name' => 
+  array (
+    'default' => '',
+  ),
+  'commission' => 
+  array (
+    'default' => '',
+  ),
+  'accounts_name' => 
+  array (
+    'default' => '',
+  ),
+  'cancelled_by' => 
+  array (
+    'default' => '',
+  ),
+  'cancelled_dvsa' => 
+  array (
+    'default' => '',
+  ),
   'k_buyer_name' => 
+  array (
+    'default' => '',
+  ),
+  'date_modified' => 
+  array (
+    'default' => '',
+  ),
+  'date_entered' => 
+  array (
+    'default' => '',
+  ),
+  'created_by_name' => 
   array (
     'default' => '',
   ),
@@ -54,6 +150,13 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'default' => true,
     'name' => 'k_test_center',
   ),
+  'date_entered' => 
+  array (
+    'type' => 'datetime',
+    'width' => '15%',
+    'label' => 'LBL_DATE_ENTERED',
+    'default' => true,
+  ),
   'k_buyer_name' => 
   array (
     'type' => 'varchar',
@@ -61,6 +164,22 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '10%',
     'default' => true,
     'name' => 'k_buyer_name',
+  ),
+  'date_modified' => 
+  array (
+    'type' => 'datetime',
+    'width' => '15%',
+    'label' => 'LBL_DATE_MODIFIED',
+    'default' => false,
+  ),
+  'created_by_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => false,
   ),
   'k_test_detail' => 
   array (

@@ -24,6 +24,18 @@ $dashletData['li_LicenseDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'date_entered' => 
+  array (
+    'default' => '',
+  ),
+  'date_modified' => 
+  array (
+    'default' => '',
+  ),
+  'created_by_name' => 
+  array (
+    'default' => '',
+  ),
 );
 $dashletData['li_LicenseDashlet']['columns'] = array (
   'name' => 
@@ -40,6 +52,7 @@ $dashletData['li_LicenseDashlet']['columns'] = array (
     'label' => 'LBL_THEORY',
     'width' => '10%',
     'default' => true,
+    'name' => 'theory',
   ),
   'availability' => 
   array (
@@ -74,5 +87,37 @@ $dashletData['li_LicenseDashlet']['columns'] = array (
     'width' => '10%',
     'default' => true,
     'name' => 'k_requested_centre_c',
+  ),
+  'date_entered' => 
+  array (
+    'type' => 'datetime',
+    'width' => '15%',
+    'label' => 'LBL_DATE_ENTERED',
+    'default' => false,
+  ),
+  'date_modified' => 
+  array (
+    'type' => 'datetime',
+    'width' => '15%',
+    'label' => 'LBL_DATE_MODIFIED',
+    'default' => false,
+  ),
+  'assigned_user_name' => 
+  array (
+    'link' => true,
+    'type' => 'relate',
+    'width' => '8%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => false,
+  ),
+  'created_by_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => false,
   ),
 );

@@ -37,12 +37,10 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'CREATED_BY_NAME' => 
+  'DATE_ENTERED' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_CREATED',
-    'id' => 'CREATED_BY',
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
     'width' => '10%',
     'default' => true,
   ),
@@ -50,6 +48,15 @@ array (
   array (
     'type' => 'datetime',
     'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
     'width' => '10%',
     'default' => true,
   ),

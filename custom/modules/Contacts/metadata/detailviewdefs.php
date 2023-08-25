@@ -148,107 +148,100 @@ array (
         array (
           0 => 
           array (
-            'name' => 'first_name',
-            'comment' => 'First name of the contact',
-            'label' => 'LBL_FIRST_NAME',
+            'name' => 'full_name',
+            'studio' => 
+            array (
+              'listview' => false,
+            ),
+            'label' => 'LBL_NAME',
           ),
           1 => 
           array (
-            'name' => 'last_name',
-            'comment' => 'Last name of the contact',
-            'label' => 'LBL_LAST_NAME',
+            'name' => 'phone_mobile',
+            'label' => 'LBL_MOBILE_PHONE',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'phone_mobile',
-            'label' => 'LBL_MOBILE_PHONE',
-          ),
-          1 => 
-          array (
             'name' => 'email1',
             'studio' => 'false',
             'label' => 'LBL_EMAIL_ADDRESS',
+          ),
+          1 => 
+          array (
+            'name' => 'buyer_type',
+            'label' => 'LBL_BUYER_TYPE',
           ),
         ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'buyer_type',
-            'label' => 'LBL_BUYER_TYPE',
+            'name' => 'account_name',
+            'label' => 'LBL_ACCOUNT_NAME',
           ),
           1 => 
           array (
-            'name' => 'account_name',
-            'label' => 'LBL_ACCOUNT_NAME',
+            'name' => 'priority',
+            'label' => 'LBL_PRIORITY',
           ),
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'priority',
-            'label' => 'LBL_PRIORITY',
+            'name' => 'payment_type',
+            'label' => 'LBL_PAYMENT_TYPE',
           ),
           1 => 
           array (
-            'name' => 'payment_type',
-            'label' => 'LBL_PAYMENT_TYPE',
+            'name' => 'amount',
+            'label' => 'LBL_AMOUNT',
           ),
         ),
         4 => 
         array (
           0 => 
           array (
-            'name' => 'amount',
-            'label' => 'LBL_AMOUNT',
+            'name' => 'li_license_name',
+            'label' => 'LBL_LI_LICENSE_NAME',
           ),
           1 => 
           array (
-            'name' => 'li_license_name',
-            'label' => 'LBL_LI_LICENSE_NAME',
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
           ),
         ),
         5 => 
         array (
           0 => 
           array (
-            'name' => 'description',
-            'comment' => 'Full text of the note',
-            'label' => 'LBL_DESCRIPTION',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
           1 => 
           array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO_NAME',
+            'name' => 'date_entered',
+            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+            'label' => 'LBL_DATE_ENTERED',
           ),
         ),
         6 => 
         array (
           0 => 
           array (
-            'name' => 'date_entered',
-            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
-            'label' => 'LBL_DATE_ENTERED',
-          ),
-          1 => 
-          array (
             'name' => 'date_modified',
             'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
             'label' => 'LBL_DATE_MODIFIED',
           ),
-        ),
-        7 => 
-        array (
-          0 => 
+          1 => 
           array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => '',
         ),
       ),
     ),

@@ -49,37 +49,37 @@ array (
         array (
           0 => 
           array (
-            'name' => 'first_name',
-            'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">',
+            'name' => 'full_name',
+            'studio' => 
+            array (
+              'listview' => false,
+            ),
+            'label' => 'LBL_NAME',
           ),
           1 => 
           array (
-            'name' => 'last_name',
+            'name' => 'phone_mobile',
+            'comment' => 'Mobile phone number of the contact',
+            'label' => 'LBL_MOBILE_PHONE',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'phone_mobile',
-            'comment' => 'Mobile phone number of the contact',
-            'label' => 'LBL_MOBILE_PHONE',
-          ),
-          1 => 
-          array (
             'name' => 'email1',
             'studio' => 'false',
             'label' => 'LBL_EMAIL_ADDRESS',
+          ),
+          1 => 
+          array (
+            'name' => 'buyer_type',
+            'label' => 'LBL_BUYER_TYPE',
           ),
         ),
         2 => 
         array (
           0 => 
-          array (
-            'name' => 'buyer_type',
-            'label' => 'LBL_BUYER_TYPE',
-          ),
-          1 => 
           array (
             'name' => 'account_name',
             'displayParams' => 
@@ -93,69 +93,65 @@ array (
               ),
             ),
           ),
+          1 => 
+          array (
+            'name' => 'priority',
+            'label' => 'LBL_PRIORITY',
+          ),
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'priority',
-            'label' => 'LBL_PRIORITY',
+            'name' => 'payment_type',
+            'label' => 'LBL_PAYMENT_TYPE',
           ),
           1 => 
           array (
-            'name' => 'payment_type',
-            'label' => 'LBL_PAYMENT_TYPE',
+            'name' => 'amount',
+            'label' => 'LBL_AMOUNT',
           ),
         ),
         4 => 
         array (
           0 => 
           array (
-            'name' => 'amount',
-            'label' => 'LBL_AMOUNT',
+            'name' => 'li_license_name',
+            'label' => 'LBL_LI_LICENSE_NAME',
           ),
           1 => 
           array (
-            'name' => 'li_license_name',
-            'label' => 'LBL_LI_LICENSE_NAME',
+            'name' => 'description',
+            'label' => 'LBL_DESCRIPTION',
           ),
         ),
         5 => 
         array (
           0 => 
           array (
-            'name' => 'description',
-            'label' => 'LBL_DESCRIPTION',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
           1 => 
           array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO_NAME',
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
           ),
         ),
         6 => 
         array (
           0 => 
           array (
-            'name' => 'date_entered',
-            'comment' => 'Date record created',
-            'label' => 'LBL_DATE_ENTERED',
-          ),
-          1 => 
-          array (
             'name' => 'date_modified',
             'comment' => 'Date record last modified',
             'label' => 'LBL_DATE_MODIFIED',
           ),
-        ),
-        7 => 
-        array (
-          0 => 
+          1 => 
           array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => '',
         ),
       ),
     ),

@@ -77,7 +77,26 @@ array (
             'comment' => 'Full text of the note',
             'label' => 'LBL_DESCRIPTION',
           ),
-          1 => '',
+          1 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+          1 => 
+          array (
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'label' => 'LBL_DATE_MODIFIED',
+          ),
         ),
       ),
     ),

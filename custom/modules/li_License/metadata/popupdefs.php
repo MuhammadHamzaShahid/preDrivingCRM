@@ -10,6 +10,9 @@ $popupMeta = array (
   'k_requested_centre_c' => 'li_license.k_requested_centre_c',
   'theory' => 'li_license.theory',
   'availability' => 'li_license.availability',
+  'date_entered' => 'li_license.date_entered',
+  'date_modified' => 'li_license.date_modified',
+  'created_by_name' => 'li_license.created_by_name',
 ),
     'searchInputs' => array (
   1 => 'name',
@@ -18,6 +21,9 @@ $popupMeta = array (
   6 => 'k_requested_centre_c',
   7 => 'theory',
   8 => 'availability',
+  9 => 'date_entered',
+  10 => 'date_modified',
+  11 => 'created_by_name',
 ),
     'searchdefs' => array (
   'name' => 
@@ -61,6 +67,29 @@ $popupMeta = array (
     'label' => 'LBL_K_REQUESTED_CENTRE_C',
     'width' => '10%',
     'name' => 'k_requested_centre_c',
+  ),
+  'date_entered' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'name' => 'date_entered',
+  ),
+  'date_modified' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'name' => 'date_modified',
+  ),
+  'created_by_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'name' => 'created_by_name',
   ),
 ),
     'listviewdefs' => array (
@@ -114,6 +143,22 @@ $popupMeta = array (
     'default' => true,
     'name' => 'k_requested_centre_c',
   ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'date_entered',
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'date_modified',
+  ),
   'CREATED_BY_NAME' => 
   array (
     'type' => 'relate',
@@ -123,14 +168,6 @@ $popupMeta = array (
     'width' => '10%',
     'default' => true,
     'name' => 'created_by_name',
-  ),
-  'DATE_MODIFIED' => 
-  array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_MODIFIED',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'date_modified',
   ),
 ),
 );

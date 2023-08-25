@@ -58,13 +58,16 @@ array (
               'required' => true,
             ),
           ),
+          1 => 
+          array (
+            'name' => 'phone_office',
+          ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'k_gateway_id_c',
-            'label' => 'LBL_K_GATEWAY_ID_C',
+            'name' => 'email1',
           ),
           1 => 
           array (
@@ -76,11 +79,41 @@ array (
         array (
           0 => 
           array (
-            'name' => 'email1',
+            'name' => 'k_gateway_id_c',
+            'label' => 'LBL_K_GATEWAY_ID_C',
           ),
           1 => 
           array (
-            'name' => 'phone_office',
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'label' => 'LBL_DATE_MODIFIED',
+          ),
+          1 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
+          ),
+          1 => 
+          array (
+            'name' => 'assigned_user_name',
           ),
         ),
       ),
