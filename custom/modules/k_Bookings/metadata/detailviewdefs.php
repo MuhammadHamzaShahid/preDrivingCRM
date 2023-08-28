@@ -104,6 +104,24 @@ array (
             'name' => 'total',
             'label' => 'LBL_TOTAL',
           ),
+          1 => 
+          array (
+            'name' => 'k_old_test_detail',
+            'label' => 'LBL_K_OLD_TEST_DETAIL',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_swap_count',
+            'label' => 'LBL_K_SWAP_COUNT',
+          ),
+          1 => 
+          array (
+            'name' => 'k_swap_date',
+            'label' => 'LBL_K_SWAP_DATE',
+          ),
         ),
       ),
       'default' => 
