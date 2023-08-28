@@ -6,5 +6,6 @@ $dictionary['k_transactions']['fields']['k_transaction_amount'] = array(
     'type' => 'varchar',
     'len' => '255',
     'audited'=>true,
+    'required'=>true,
 
 );

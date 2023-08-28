@@ -43,16 +43,16 @@ array (
           ),
           1 => 
           array (
-            'name' => 'contacts_name',
-            'label' => 'LBL_CONTACTS_NAME',
+            'name' => 'k_transaction_type',
+            'label' => 'LBL_K_TRANSACTION_TYPE',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'k_transaction_type',
-            'label' => 'LBL_K_TRANSACTION_TYPE',
+            'name' => 'k_payment_method',
+            'label' => 'LBL_K_PAYMENT_METHOD',
           ),
           1 => 
           array (
@@ -64,27 +64,15 @@ array (
         array (
           0 => 
           array (
-            'name' => 'k_payment_method',
-            'label' => 'LBL_K_PAYMENT_METHOD',
-          ),
-          1 => 
-          array (
             'name' => 'k_transaction_amount',
             'label' => 'LBL_K_TRANSACTION_AMOUNT',
           ),
+          1 => 'description',
         ),
         3 => 
         array (
-          0 => 'description',
-          1 => 
-          array (
-            'name' => 'created_by_name',
-            'label' => 'LBL_CREATED',
-          ),
-        ),
-        4 => 
-        array (
           0 => 'assigned_user_name',
+          1 => '',
         ),
       ),
     ),
