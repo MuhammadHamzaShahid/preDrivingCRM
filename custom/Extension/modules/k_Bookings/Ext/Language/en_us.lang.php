@@ -18,6 +18,7 @@ $mod_strings['LBL_VAT'] = 'Vat';
 $mod_strings['LBL_REMINDER'] = 'Reminder';
 $mod_strings['LBL_DAYS_TO_PAY'] = 'Days to Pay';
 $mod_strings['LBL_K_TEST_DETAIL'] = 'Test Detail';
+$mod_strings['LBL_K_OLD_TEST_DETAIL'] = 'Old Test Detail';
 $mod_strings['LBL_K_LICENSE_NO'] = 'Driving License No';
 $mod_strings['LBL_K_CANDIDATE_NAME'] = 'Candidate Name Custom';
 $mod_strings['LBL_NAME'] = 'Candidate Name';
@@ -25,5 +26,8 @@ $mod_strings['LBL_K_TEST_CENTER'] = 'Test Center';
 $mod_strings['LBL_K_DRIVING_TEST_REF_NO'] = 'Driving Test Reference No';
 $mod_strings['LBL_K_BUYER_NAME'] = 'Buyer Name';
 $mod_strings['LBL_K_SWAP'] = 'Swap';
+$mod_strings['LBL_K_SWAP_COUNT'] = 'Swap Count';
+$mod_strings['LBL_K_SWAP_DATE'] = 'Swap Date';
+
 
 
