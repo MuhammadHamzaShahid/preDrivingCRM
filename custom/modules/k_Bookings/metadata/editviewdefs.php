@@ -94,6 +94,11 @@ array (
             'name' => 'total',
             'label' => 'LBL_TOTAL',
           ),
+          1 => 
+          array (
+            'name' => 'k_management_fee',
+            'label' => 'LBL_K_MANAGEMENT_FEE',
+          ),
         ),
       ),
       'default' => 

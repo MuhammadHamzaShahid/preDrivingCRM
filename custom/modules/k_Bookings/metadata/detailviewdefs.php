@@ -123,6 +123,19 @@ array (
             'label' => 'LBL_K_SWAP_DATE',
           ),
         ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_swap_fee',
+            'label' => 'LBL_K_SWAP_FEE',
+          ),
+          1 => 
+          array (
+            'name' => 'k_management_fee',
+            'label' => 'LBL_K_MANAGEMENT_FEE',
+          ),
+        ),
       ),
       'default' => 
       array (
@@ -257,7 +270,6 @@ array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => '',
         ),
       ),
     ),

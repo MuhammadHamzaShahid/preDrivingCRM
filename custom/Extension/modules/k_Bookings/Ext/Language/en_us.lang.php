@@ -28,6 +28,9 @@ $mod_strings['LBL_K_BUYER_NAME'] = 'Buyer Name';
 $mod_strings['LBL_K_SWAP'] = 'Swap';
 $mod_strings['LBL_K_SWAP_COUNT'] = 'Swap Count';
 $mod_strings['LBL_K_SWAP_DATE'] = 'Swap Date';
+$mod_strings['LBL_K_SWAP_FEE'] = 'Swap Fee';
+$mod_strings['LBL_K_MANAGEMENT_FEE'] = 'Management Fee';
+
 
 
 

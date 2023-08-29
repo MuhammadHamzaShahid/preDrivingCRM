@@ -30,6 +30,13 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'K_MANAGEMENT_FEE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_MANAGEMENT_FEE',
+    'width' => '10%',
+    'default' => true,
+  ),
   'K_DATE_AND_TIME' => 
   array (
     'type' => 'datetime',
