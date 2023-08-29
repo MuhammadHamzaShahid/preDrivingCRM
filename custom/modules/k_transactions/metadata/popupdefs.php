@@ -6,30 +6,34 @@ $popupMeta = array (
     'whereClauses' => array (
   'k_bookings_name' => 'k_transactions.k_bookings_name',
   'contacts_name' => 'k_transactions.contacts_name',
-  'k_transaction_type' => 'k_transactions.k_transaction_type',
-  'k_transaction_refund_date' => 'k_transactions.k_transaction_refund_date',
-  'k_payment_method' => 'k_transactions.k_payment_method',
   'k_transaction_amount' => 'k_transactions.k_transaction_amount',
   'assigned_user_name' => 'k_transactions.assigned_user_name',
   'date_entered' => 'k_transactions.date_entered',
   'date_modified' => 'k_transactions.date_modified',
   'created_by_name' => 'k_transactions.created_by_name',
   'assigned_user_id' => 'k_transactions.assigned_user_id',
+  'name' => 'k_transactions.name',
 ),
     'searchInputs' => array (
   4 => 'k_bookings_name',
   5 => 'contacts_name',
-  6 => 'k_transaction_type',
-  7 => 'k_transaction_refund_date',
-  8 => 'k_payment_method',
   9 => 'k_transaction_amount',
   10 => 'assigned_user_name',
   11 => 'date_entered',
   12 => 'date_modified',
   13 => 'created_by_name',
   14 => 'assigned_user_id',
+  15 => 'name',
 ),
     'searchdefs' => array (
+  'name' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'width' => '10%',
+    'name' => 'name',
+  ),
   'k_bookings_name' => 
   array (
     'type' => 'relate',
@@ -47,27 +51,6 @@ $popupMeta = array (
     'id' => 'CONTACTS_ID',
     'width' => '10%',
     'name' => 'contacts_name',
-  ),
-  'k_transaction_type' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_TRANSACTION_TYPE',
-    'width' => '10%',
-    'name' => 'k_transaction_type',
-  ),
-  'k_transaction_refund_date' => 
-  array (
-    'type' => 'date',
-    'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-    'width' => '10%',
-    'name' => 'k_transaction_refund_date',
-  ),
-  'k_payment_method' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_PAYMENT_METHOD',
-    'width' => '10%',
-    'name' => 'k_payment_method',
   ),
   'k_transaction_amount' => 
   array (
@@ -125,6 +108,14 @@ $popupMeta = array (
   ),
 ),
     'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+    'name' => 'name',
+  ),
   'K_BOOKINGS_NAME' => 
   array (
     'type' => 'relate',
@@ -144,30 +135,6 @@ $popupMeta = array (
     'width' => '10%',
     'default' => true,
     'name' => 'contacts_name',
-  ),
-  'K_TRANSACTION_TYPE' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_TRANSACTION_TYPE',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_transaction_type',
-  ),
-  'K_TRANSACTION_REFUND_DATE' => 
-  array (
-    'type' => 'date',
-    'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_transaction_refund_date',
-  ),
-  'K_PAYMENT_METHOD' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_PAYMENT_METHOD',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_payment_method',
   ),
   'K_TRANSACTION_AMOUNT' => 
   array (

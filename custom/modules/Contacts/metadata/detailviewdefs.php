@@ -243,6 +243,15 @@ array (
             'label' => 'LBL_CREATED',
           ),
         ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_total_payment',
+            'label' => 'LBL_K_TOTAL_PAYMENT',
+          ),
+          1 => '',
+        ),
       ),
     ),
   ),

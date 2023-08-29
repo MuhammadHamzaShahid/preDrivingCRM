@@ -42,7 +42,7 @@ $dictionary['k_Bookings']['fields']['k_bookings_contacts_link'] = array(
 //relationship
 $dictionary['k_Bookings']['relationships']['k_bookings_contacts_rel'] = array(
     'lhs_module' => 'Contacts',
-    'lhs_table' => 'contact',
+    'lhs_table' => 'contacts',
     'lhs_key' => 'id',
     'rhs_module' => 'k_Bookings',
     'rhs_table' => 'k_bookings',

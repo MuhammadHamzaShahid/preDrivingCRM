@@ -1,5 +1,9 @@
 <?php
 $dashletData['k_transactionsDashlet']['searchFields'] = array (
+  'name' => 
+  array (
+    'default' => '',
+  ),
   'k_bookings_name' => 
   array (
     'default' => '',
@@ -8,19 +12,7 @@ $dashletData['k_transactionsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
-  'k_transaction_type' => 
-  array (
-    'default' => '',
-  ),
-  'k_transaction_refund_date' => 
-  array (
-    'default' => '',
-  ),
   'k_transaction_amount' => 
-  array (
-    'default' => '',
-  ),
-  'k_payment_method' => 
   array (
     'default' => '',
   ),
@@ -42,6 +34,14 @@ $dashletData['k_transactionsDashlet']['searchFields'] = array (
   ),
 );
 $dashletData['k_transactionsDashlet']['columns'] = array (
+  'name' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'width' => '40%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+  ),
   'k_bookings_name' => 
   array (
     'type' => 'relate',
@@ -62,30 +62,6 @@ $dashletData['k_transactionsDashlet']['columns'] = array (
     'default' => true,
     'name' => 'contacts_name',
   ),
-  'k_transaction_type' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_TRANSACTION_TYPE',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_transaction_type',
-  ),
-  'k_transaction_refund_date' => 
-  array (
-    'type' => 'date',
-    'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_transaction_refund_date',
-  ),
-  'k_payment_method' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_PAYMENT_METHOD',
-    'width' => '10%',
-    'default' => true,
-    'name' => 'k_payment_method',
-  ),
   'k_transaction_amount' => 
   array (
     'type' => 'varchar',
@@ -98,7 +74,7 @@ $dashletData['k_transactionsDashlet']['columns'] = array (
   array (
     'width' => '15%',
     'label' => 'LBL_DATE_ENTERED',
-    'default' => false,
+    'default' => true,
     'name' => 'date_entered',
   ),
   'date_modified' => 
@@ -106,22 +82,6 @@ $dashletData['k_transactionsDashlet']['columns'] = array (
     'width' => '15%',
     'label' => 'LBL_DATE_MODIFIED',
     'name' => 'date_modified',
-    'default' => false,
-  ),
-  'created_by_name' => 
-  array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_CREATED',
-    'id' => 'CREATED_BY',
-    'width' => '10%',
-    'default' => false,
-  ),
-  'assigned_user_name' => 
-  array (
-    'width' => '8%',
-    'label' => 'LBL_LIST_ASSIGNED_USER',
-    'name' => 'assigned_user_name',
-    'default' => false,
+    'default' => true,
   ),
 );

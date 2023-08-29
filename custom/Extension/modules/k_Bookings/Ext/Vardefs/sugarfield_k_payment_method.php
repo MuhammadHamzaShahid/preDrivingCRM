@@ -1,5 +1,5 @@
 <?php
-$dictionary['k_transactions']['fields']['k_payment_method'] = array(
+$dictionary['k_Bookings']['fields']['k_payment_method'] = array(
     'name' => 'k_payment_method',
     'vname' => 'LBL_K_PAYMENT_METHOD',
     'type' => 'enum',

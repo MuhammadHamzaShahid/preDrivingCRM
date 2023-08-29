@@ -9,10 +9,10 @@ class updateContactFromBookingClass
                 // Check if the related contact exists
             if (!empty($bookingBean->contacts_id)) {
                 // Load the respective contact record
-                $contactBean = BeanFactory::getBean('Contacts', $bookingBean->contacts_id);
+                // $contactBean = BeanFactory::getBean('Contacts', $bookingBean->contacts_id);
 
                 // Update the contact field in the transaction record with the contact name
-                $bean->contacts_id = $contactBean->id;
+                $bean->contacts_id = $bookingBean->contacts_id;
             }
         }
     }

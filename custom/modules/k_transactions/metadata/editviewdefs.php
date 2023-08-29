@@ -43,36 +43,14 @@ array (
           ),
           1 => 
           array (
-            'name' => 'k_transaction_type',
-            'label' => 'LBL_K_TRANSACTION_TYPE',
+            'name' => 'k_transaction_amount',
+            'label' => 'LBL_K_TRANSACTION_AMOUNT',
           ),
         ),
         1 => 
         array (
-          0 => 
-          array (
-            'name' => 'k_payment_method',
-            'label' => 'LBL_K_PAYMENT_METHOD',
-          ),
-          1 => 
-          array (
-            'name' => 'k_transaction_refund_date',
-            'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'k_transaction_amount',
-            'label' => 'LBL_K_TRANSACTION_AMOUNT',
-          ),
-          1 => 'description',
-        ),
-        3 => 
-        array (
-          0 => 'assigned_user_name',
-          1 => '',
+          0 => 'description',
+          1 => 'assigned_user_name',
         ),
       ),
     ),

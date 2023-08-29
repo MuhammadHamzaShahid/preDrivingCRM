@@ -94,6 +94,11 @@ array (
             'name' => 'total',
             'label' => 'LBL_TOTAL',
           ),
+          1 => 
+          array (
+            'name' => 'k_management_fee',
+            'label' => 'LBL_K_MANAGEMENT_FEE',
+          ),
         ),
       ),
       'default' => 
@@ -213,21 +218,6 @@ array (
           1 => 'assigned_user_name',
         ),
         9 => 
-        array (
-          0 => 
-          array (
-            'name' => 'date_entered',
-            'comment' => 'Date record created',
-            'label' => 'LBL_DATE_ENTERED',
-          ),
-          1 => 
-          array (
-            'name' => 'date_modified',
-            'comment' => 'Date record last modified',
-            'label' => 'LBL_DATE_MODIFIED',
-          ),
-        ),
-        10 => 
         array (
           0 => 
           array (

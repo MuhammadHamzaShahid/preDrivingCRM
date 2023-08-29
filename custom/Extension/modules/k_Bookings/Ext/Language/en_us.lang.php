@@ -30,6 +30,13 @@ $mod_strings['LBL_K_SWAP_COUNT'] = 'Swap Count';
 $mod_strings['LBL_K_SWAP_DATE'] = 'Swap Date';
 $mod_strings['LBL_K_SWAP_FEE'] = 'Swap Fee';
 $mod_strings['LBL_K_MANAGEMENT_FEE'] = 'Management Fee';
+$mod_strings['LBL_K_REFUND_DATE'] = 'Refund Date';
+$mod_strings['LBL_K_PAYMENT_METHOD'] = 'Payment Method';
+$mod_strings['LBL_K_TRANSACTION_TYPE'] = 'Payment Type';
+$mod_strings['LBL_K_TRANSACTIONS'] = 'Transactions';
+
+
+
 
 
 

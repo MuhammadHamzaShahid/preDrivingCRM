@@ -2,6 +2,13 @@
 $module_name = 'k_transactions';
 $listViewDefs [$module_name] = 
 array (
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+  ),
   'K_BOOKINGS_NAME' => 
   array (
     'type' => 'relate',
@@ -17,27 +24,6 @@ array (
     'link' => true,
     'label' => 'LBL_CONTACTS_NAME',
     'id' => 'CONTACTS_ID',
-    'width' => '10%',
-    'default' => true,
-  ),
-  'K_TRANSACTION_TYPE' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_TRANSACTION_TYPE',
-    'width' => '10%',
-    'default' => true,
-  ),
-  'K_TRANSACTION_REFUND_DATE' => 
-  array (
-    'type' => 'date',
-    'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-    'width' => '10%',
-    'default' => true,
-  ),
-  'K_PAYMENT_METHOD' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_K_PAYMENT_METHOD',
     'width' => '10%',
     'default' => true,
   ),

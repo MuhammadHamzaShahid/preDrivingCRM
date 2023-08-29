@@ -28,6 +28,11 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
+        'LBL_EDITVIEW_PANEL2' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
         'DEFAULT' => 
         array (
           'newTab' => false,
@@ -91,17 +96,52 @@ array (
         array (
           0 => 
           array (
-            'name' => 'total',
-            'label' => 'LBL_TOTAL',
+            'name' => 'test_fee',
+            'label' => 'LBL_TEST_FEE',
           ),
           1 => 
           array (
-            'name' => 'k_management_fee',
-            'label' => 'LBL_K_MANAGEMENT_FEE',
+            'name' => 'commission',
+            'label' => 'LBL_COMMISSION',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'test_days',
+            'label' => 'LBL_TEST_DAYS',
+          ),
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'discount',
+            'label' => 'LBL_DISCOUNT',
+          ),
+          1 => 
+          array (
+            'name' => 'vat',
+            'label' => 'LBL_VAT',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_swap_fee',
+            'label' => 'LBL_K_SWAP_FEE',
+          ),
+          1 => 
+          array (
+            'name' => 'total',
+            'label' => 'LBL_TOTAL',
           ),
         ),
       ),
-      'default' => 
+      'lbl_editview_panel2' => 
       array (
         0 => 
         array (
@@ -129,6 +169,35 @@ array (
             'label' => 'LBL_STATUS',
           ),
         ),
+      ),
+      'default' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_payment_method',
+            'label' => 'LBL_K_PAYMENT_METHOD',
+          ),
+          1 => 
+          array (
+            'name' => 'k_transaction_type',
+            'label' => 'LBL_K_TRANSACTION_TYPE',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'refund',
+            'label' => 'LBL_REFUND',
+          ),
+          1 => 
+          array (
+            'name' => 'k_refund_date',
+            'label' => 'LBL_K_REFUND_DATE',
+          ),
+        ),
         2 => 
         array (
           0 => 
@@ -146,21 +215,8 @@ array (
         array (
           0 => 
           array (
-            'name' => 'refund',
-            'label' => 'LBL_REFUND',
-          ),
-          1 => 
-          array (
             'name' => 'cancelled_dvsa',
             'label' => 'LBL_CANCELLED_DVSA',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'test_days',
-            'label' => 'LBL_TEST_DAYS',
           ),
           1 => 
           array (
@@ -168,33 +224,7 @@ array (
             'label' => 'LBL_CONFIRMATION_REMINDER',
           ),
         ),
-        5 => 
-        array (
-          0 => 
-          array (
-            'name' => 'test_fee',
-            'label' => 'LBL_TEST_FEE',
-          ),
-          1 => 
-          array (
-            'name' => 'commission',
-            'label' => 'LBL_COMMISSION',
-          ),
-        ),
-        6 => 
-        array (
-          0 => 
-          array (
-            'name' => 'discount',
-            'label' => 'LBL_DISCOUNT',
-          ),
-          1 => 
-          array (
-            'name' => 'vat',
-            'label' => 'LBL_VAT',
-          ),
-        ),
-        7 => 
+        4 => 
         array (
           0 => 
           array (
@@ -207,12 +237,12 @@ array (
             'label' => 'LBL_REMINDER',
           ),
         ),
-        8 => 
+        5 => 
         array (
           0 => 'description',
           1 => 'assigned_user_name',
         ),
-        9 => 
+        6 => 
         array (
           0 => 
           array (

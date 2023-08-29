@@ -29,6 +29,15 @@ array (
     ),
     'advanced_search' => 
     array (
+      'name' => 
+      array (
+        'type' => 'name',
+        'link' => true,
+        'label' => 'LBL_NAME',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'name',
+      ),
       'k_bookings_name' => 
       array (
         'type' => 'relate',
@@ -48,30 +57,6 @@ array (
         'default' => true,
         'id' => 'CONTACTS_ID',
         'name' => 'contacts_name',
-      ),
-      'k_transaction_type' => 
-      array (
-        'type' => 'enum',
-        'label' => 'LBL_K_TRANSACTION_TYPE',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'k_transaction_type',
-      ),
-      'k_transaction_refund_date' => 
-      array (
-        'type' => 'date',
-        'label' => 'LBL_K_TRANSACTION_REFUND_DATE',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'k_transaction_refund_date',
-      ),
-      'k_payment_method' => 
-      array (
-        'type' => 'enum',
-        'label' => 'LBL_K_PAYMENT_METHOD',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'k_payment_method',
       ),
       'k_transaction_amount' => 
       array (

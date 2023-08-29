@@ -9,6 +9,22 @@ array (
     'default' => true,
     'link' => true,
   ),
+  'CONTACTS_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CONTACTS_NAME',
+    'id' => 'CONTACTS_ID',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_TRANSACTION_TYPE' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_TRANSACTION_TYPE',
+    'width' => '10%',
+    'default' => true,
+  ),
   'K_LICENSE_NO' => 
   array (
     'type' => 'varchar',
@@ -30,10 +46,10 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'K_MANAGEMENT_FEE' => 
+  'TOTAL' => 
   array (
     'type' => 'varchar',
-    'label' => 'LBL_K_MANAGEMENT_FEE',
+    'label' => 'LBL_TOTAL',
     'width' => '10%',
     'default' => true,
   ),
