@@ -6,7 +6,7 @@ class bookingLogicHookClass
     public function bookingLogicHookMethod($bean, $event, $arguments)
     {
             // Check if the test detail field has been update/edit
-            if (empty($bean->fetched_row) || $bean->k_test_detail != $bean->fetched_row['k_test_detail']){
+        if (empty($bean->fetched_row) || $bean->k_test_detail != $bean->fetched_row['k_test_detail']){
             // Extracting the data from the custom test detail field
             $data =  preg_split('/\t+/', $bean->k_test_detail);
             $fieldCount = count($data); 
@@ -35,33 +35,49 @@ class bookingLogicHookClass
             }
         }
     
-        // Check if the swap field has been set to 'yes'
+                // Check if the swap field has been set to 'yes'
         if ($bean->k_swap === 'Yes') {
-            // Check if the old test detail is empty
-            if (empty($bean->k_old_test_detail)) {
+                $currentTestDetail = $bean->k_test_detail;
+                $currentAccount = $bean->accounts_id;
+                $currentLicense = $bean->li_license_id;
+                $currentCustomerName = $bean->contacts_id;
+                
+                //Check if the test detail, account, license, and customer name fields are the same
+            if ($currentTestDetail != $bean->fetched_row['k_test_detail'] ||
+                $currentAccount != $bean->fetched_row['accounts_id'] ||
+                $currentLicense != $bean->fetched_row['li_license_id'] ||
+                $currentCustomerName != $bean->fetched_row['contacts_id']) {
+           
+                // Check if the old test detail is empty
+                if (empty($bean->k_old_test_detail)) {
                 $bean->k_old_test_detail = $bean->k_test_detail;
-            } else {
+                } else {
                 $oldTestDetail = $bean->k_old_test_detail;
                 $oldTestDetail .= "\n" . $bean->k_test_detail;
                 $bean->k_old_test_detail = $oldTestDetail;
-            }
+                }
 
-                 // Increment swap count
+                // Increment swap count
                 $currentSwapCount = (int)$bean->k_swap_count; // Convert to integer
                 $bean->k_swap_count = $currentSwapCount + 1;
+
+                // Increment swap fee by $20 for every swap
+                $currentSwapFee = (float) str_replace('$', '', $bean->k_swap_fee); // ignore '$' sign and convert to float while increment
+                $newSwapFee = $currentSwapFee + 20.0;
+                $bean->k_swap_fee = '$' . $newSwapFee;
 
                 // Note swap date and save entries
                 $swapDate = date('d/m/Y');
                 $oldSwapDates = $bean->k_swap_date; // Retrieve existing swap dates
 
-            if (empty($oldSwapDates)) {
+                 if (empty($oldSwapDates)) {
                 // No existing history, save the current value as the first entry
                 $bean->k_swap_date = "Swap " . $bean->k_swap_count . ": " . $swapDate;
-            } else {
+                } else {
                 // Append the new value to the existing history
                 $bean->k_swap_date = $oldSwapDates . "\n" . "Swap " . $bean->k_swap_count . ": " . $swapDate;
+                }
             }
-            $bean->k_swap = 'No';
-        }                      
+        }       $bean->k_swap = 'No';                 
     }
 }
