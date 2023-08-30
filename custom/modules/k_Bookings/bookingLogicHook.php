@@ -89,15 +89,11 @@ class bookingLogicHookClass
             $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee;
             if($bean->contacts_id!=''){
                 // Query to get the current count of bookings transactions
-                $query = "SELECT SUM(total) AS sum FROM k_Bookings where contacts_id='$bean->contacts_id' AND k_transaction_type='Pending' AND deleted='0'";
+                $query = "SELECT SUM(total) AS sum FROM k_Bookings where contacts_id='$bean->contacts_id' AND id!='$bean->id' AND k_transaction_type='Pending' AND deleted='0'";
                 // Execute the query and retrieve the count of transactions
                 $result = $GLOBALS['db']->query($query);
                 $row = $GLOBALS['db']->fetchByAssoc($result);
-                if(empty($bean->fetched_row)){
-                    $sum = $row['sum'] + $bean->total;
-                }else{
-                    $sum = $row['sum'];
-                }
+                $sum = $row['sum'] + $bean->total;
                 $contactsBean = BeanFactory::getBean('Contacts',$bean->contacts_id);
                 $contactsBean->amount=$sum;
                 $contactsBean->save();
