@@ -34,6 +34,7 @@ $mod_strings['LBL_K_REFUND_DATE'] = 'Refund Date';
 $mod_strings['LBL_K_PAYMENT_METHOD'] = 'Payment Method';
 $mod_strings['LBL_K_TRANSACTION_TYPE'] = 'Payment Type';
 $mod_strings['LBL_K_TRANSACTIONS'] = 'Transactions';
+$mod_strings['LBL_K_TEST_PRIORITY'] = 'Test Priority';
 
 
 

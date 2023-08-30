@@ -3,4 +3,5 @@
     'Pending'=>'Pending',
     'Received' => 'Received',
     'Refund' => 'Refund',
+    'Credit' => 'Credit',
 );  

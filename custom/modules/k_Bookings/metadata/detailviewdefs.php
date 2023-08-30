@@ -130,6 +130,11 @@ array (
             'name' => 'test_days',
             'label' => 'LBL_TEST_DAYS',
           ),
+          1 => 
+          array (
+            'name' => 'k_test_prority',
+            'label' => 'LBL_K_TEST_PRIORITY',
+          ),
         ),
         7 => 
         array (

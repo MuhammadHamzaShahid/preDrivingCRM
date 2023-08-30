@@ -86,7 +86,7 @@ class bookingLogicHookClass
             }
         }          
             $bean->k_swap = 'No';
-            $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee;
+            $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee -(float)$bean->discount;
             if($bean->contacts_id!=''){
                 // Query to get the current count of bookings transactions
                 $query = "SELECT SUM(total) AS sum FROM k_Bookings where contacts_id='$bean->contacts_id' AND id!='$bean->id' AND k_transaction_type='Pending' AND deleted='0'";
