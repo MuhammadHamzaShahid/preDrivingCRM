@@ -25,7 +25,7 @@ $dictionary['k_Bookings']['fields']['li_license_name'] = array(
     'isnull' => 'true',
     'module' => 'li_License',
     'source' => 'non-db',
-    'required' => false,
+    'required' => true,
     'audited' => true,
 );
 //link
