@@ -34,10 +34,12 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'K_LICENSE_NO' => 
+  'CONTACTS_NAME' => 
   array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_LICENSE_NO',
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CONTACTS_NAME',
+    'id' => 'CONTACTS_ID',
     'width' => '10%',
     'default' => true,
   ),
@@ -48,12 +50,10 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'CONTACTS_NAME' => 
+  'K_LICENSE_NO' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_CONTACTS_NAME',
-    'id' => 'CONTACTS_ID',
+    'type' => 'varchar',
+    'label' => 'LBL_K_LICENSE_NO',
     'width' => '10%',
     'default' => true,
   ),
@@ -64,19 +64,33 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'TEST_FEE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_TEST_FEE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'COMMISSION' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_COMMISSION',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_SWAP_FEE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_SWAP_FEE',
+    'width' => '10%',
+    'default' => true,
+  ),
   'TOTAL' => 
   array (
     'type' => 'varchar',
     'label' => 'LBL_TOTAL',
     'width' => '10%',
     'default' => true,
-  ),
-  'K_SWAP' => 
-  array (
-    'type' => 'enum',
-    'default' => true,
-    'label' => 'LBL_K_SWAP',
-    'width' => '10%',
   ),
   'K_DATE_AND_TIME' => 
   array (
