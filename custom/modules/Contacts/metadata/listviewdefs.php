@@ -48,6 +48,15 @@ array (
     'customCode' => '{$EMAIL1_LINK}',
     'default' => true,
   ),
+  'LI_LICENSE_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_NAME',
+    'id' => 'LI_LICENSE_ID',
+    'width' => '10%',
+    'default' => true,
+  ),
   'ACCOUNT_NAME' => 
   array (
     'width' => '34%',
