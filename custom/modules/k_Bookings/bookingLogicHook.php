@@ -85,18 +85,29 @@ class bookingLogicHookClass
                 $transactionBean->save();
             }
         }          
-            $bean->k_swap = 'No';
-            $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee -(float)$bean->discount;
+                $bean->k_swap = 'No';
+                $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee -(float)$bean->discount;
             if($bean->contacts_id!=''){
                 // Query to get the current count of bookings transactions
-                $query = "SELECT SUM(total) AS sum FROM k_Bookings where contacts_id='$bean->contacts_id' AND id!='$bean->id' AND k_transaction_type='Pending' AND deleted='0'";
-                // Execute the query and retrieve the count of transactions
+                $query = "SELECT SUM(total) AS sum FROM k_Bookings WHERE contacts_id = '{$bean->contacts_id}' AND id != '{$bean->id}' AND (k_status = 'Direct' OR k_status = 'Confirmed') AND deleted = '0'";
+               
                 $result = $GLOBALS['db']->query($query);
                 $row = $GLOBALS['db']->fetchByAssoc($result);
                 $sum = $row['sum'] + $bean->total;
                 $contactsBean = BeanFactory::getBean('Contacts',$bean->contacts_id);
-                $contactsBean->amount=$sum;
+                 // Update the amount field in the Contacts module
+                $contactsBean = BeanFactory::getBean('Contacts', $bean->contacts_id);
+
+                if ($bean->k_status == 'Cancelled') {
+                // Deduct the total amount when the status is "Cancelled"
+                $contactsBean->amount = $contactsBean->amount - $bean->total;
+                } else {
+                // Add the total amount for other statuses
+                $contactsBean->amount = $sum;
+                }
+
                 $contactsBean->save();
-            }
+            } 
     }
 }
+
