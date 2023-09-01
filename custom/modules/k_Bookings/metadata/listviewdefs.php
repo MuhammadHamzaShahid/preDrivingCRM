@@ -9,19 +9,28 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'CONTACTS_NAME' => 
+  'K_STATUS' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_CONTACTS_NAME',
-    'id' => 'CONTACTS_ID',
+    'type' => 'enum',
+    'label' => 'LBL_K_STATUS',
     'width' => '10%',
     'default' => true,
   ),
-  'K_TRANSACTION_TYPE' => 
+  'ACCOUNTS_NAME' => 
   array (
-    'type' => 'enum',
-    'label' => 'LBL_K_TRANSACTION_TYPE',
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_ACCOUNTS_NAME',
+    'id' => 'ACCOUNTS_ID',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'LI_LICENSE_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_NAME',
+    'id' => 'LI_LICENSE_ID',
     'width' => '10%',
     'default' => true,
   ),
@@ -39,6 +48,15 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'CONTACTS_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CONTACTS_NAME',
+    'id' => 'CONTACTS_ID',
+    'width' => '10%',
+    'default' => true,
+  ),
   'K_BUYER_NAME' => 
   array (
     'type' => 'varchar',
@@ -52,6 +70,13 @@ array (
     'label' => 'LBL_TOTAL',
     'width' => '10%',
     'default' => true,
+  ),
+  'K_SWAP' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'label' => 'LBL_K_SWAP',
+    'width' => '10%',
   ),
   'K_DATE_AND_TIME' => 
   array (
