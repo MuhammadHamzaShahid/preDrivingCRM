@@ -8,6 +8,10 @@ $dashletData['k_BookingsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'k_status' => 
+  array (
+    'default' => '',
+  ),
   'k_driving_test_ref_no' => 
   array (
     'default' => '',
@@ -118,13 +122,14 @@ $dashletData['k_BookingsDashlet']['searchFields'] = array (
   ),
 );
 $dashletData['k_BookingsDashlet']['columns'] = array (
-  'k_candidate_name' => 
+  'name' => 
   array (
-    'type' => 'varchar',
-    'label' => 'LBL_K_CANDIDATE_NAME',
-    'width' => '10%',
+    'type' => 'name',
+    'link' => true,
+    'width' => '40%',
+    'label' => 'LBL_NAME',
     'default' => true,
-    'name' => 'k_candidate_name',
+    'name' => 'name',
   ),
   'k_license_no' => 
   array (
@@ -156,6 +161,7 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '15%',
     'label' => 'LBL_DATE_ENTERED',
     'default' => true,
+    'name' => 'date_entered',
   ),
   'k_buyer_name' => 
   array (
@@ -171,6 +177,7 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '15%',
     'label' => 'LBL_DATE_MODIFIED',
     'default' => false,
+    'name' => 'date_modified',
   ),
   'created_by_name' => 
   array (
@@ -180,6 +187,7 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'id' => 'CREATED_BY',
     'width' => '10%',
     'default' => false,
+    'name' => 'created_by_name',
   ),
   'k_test_detail' => 
   array (
@@ -196,6 +204,26 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '10%',
     'default' => false,
     'name' => 'k_last_date',
+  ),
+  'li_license_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LI_LICENSE_NAME',
+    'id' => 'LI_LICENSE_ID',
+    'width' => '10%',
+    'default' => false,
+    'name' => 'li_license_name',
+  ),
+  'accounts_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_ACCOUNTS_NAME',
+    'id' => 'ACCOUNTS_ID',
+    'width' => '10%',
+    'default' => false,
+    'name' => 'accounts_name',
   ),
   'k_date_and_time' => 
   array (
@@ -244,6 +272,14 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'default' => false,
     'name' => 'days_to_pay',
   ),
+  'k_status' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_STATUS',
+    'width' => '10%',
+    'default' => false,
+    'name' => 'k_status',
+  ),
   'test_fee' => 
   array (
     'type' => 'varchar',
@@ -285,14 +321,6 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '10%',
     'default' => false,
     'name' => 'cancelled_dvsa',
-  ),
-  'status' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_STATUS',
-    'width' => '10%',
-    'default' => false,
-    'name' => 'status',
   ),
   'test_days' => 
   array (

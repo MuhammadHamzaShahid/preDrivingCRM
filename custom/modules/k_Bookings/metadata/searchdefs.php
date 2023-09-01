@@ -50,6 +50,30 @@ array (
         'default' => true,
         'name' => 'k_driving_test_ref_no',
       ),
+      'k_status' => 
+      array (
+        'type' => 'enum',
+        'label' => 'LBL_K_STATUS',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_status',
+      ),
+      'k_test_prority' => 
+      array (
+        'type' => 'enum',
+        'label' => 'LBL_K_TEST_PRIORITY',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_test_prority',
+      ),
+      'k_swap_count' => 
+      array (
+        'type' => 'Text',
+        'label' => 'LBL_K_SWAP_COUNT',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_swap_count',
+      ),
       'k_buyer_name' => 
       array (
         'type' => 'varchar',
@@ -74,14 +98,6 @@ array (
         'width' => '10%',
         'default' => true,
         'name' => 'description',
-      ),
-      'status' => 
-      array (
-        'type' => 'enum',
-        'label' => 'LBL_STATUS',
-        'width' => '10%',
-        'default' => true,
-        'name' => 'status',
       ),
       'k_test_center' => 
       array (

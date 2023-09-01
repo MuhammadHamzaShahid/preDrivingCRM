@@ -14,6 +14,7 @@ $popupMeta = array (
   'date_entered' => 'k_bookings.date_entered',
   'date_modified' => 'k_bookings.date_modified',
   'created_by_name' => 'k_bookings.created_by_name',
+  'k_status' => 'k_bookings.k_status',
 ),
     'searchInputs' => array (
   5 => 'contacts_name',
@@ -26,6 +27,7 @@ $popupMeta = array (
   15 => 'date_entered',
   16 => 'date_modified',
   17 => 'created_by_name',
+  18 => 'k_status',
 ),
     'searchdefs' => array (
   'name' => 
@@ -58,6 +60,13 @@ $popupMeta = array (
     'id' => 'ACCOUNTS_ID',
     'width' => '10%',
     'name' => 'accounts_name',
+  ),
+  'k_status' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_STATUS',
+    'width' => '10%',
+    'name' => 'k_status',
   ),
   'k_buyer_name' => 
   array (
@@ -125,6 +134,14 @@ $popupMeta = array (
     'default' => true,
     'name' => 'k_license_no',
   ),
+  'K_STATUS' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_STATUS',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_status',
+  ),
   'K_TEST_CENTER' => 
   array (
     'type' => 'varchar',
@@ -157,6 +174,7 @@ $popupMeta = array (
     'id' => 'ACCOUNTS_ID',
     'width' => '10%',
     'default' => true,
+    'name' => 'accounts_name',
   ),
   'LI_LICENSE_NAME' => 
   array (
@@ -166,6 +184,7 @@ $popupMeta = array (
     'id' => 'LI_LICENSE_ID',
     'width' => '10%',
     'default' => true,
+    'name' => 'li_license_name',
   ),
   'K_DATE_AND_TIME' => 
   array (
@@ -175,19 +194,13 @@ $popupMeta = array (
     'default' => true,
     'name' => 'k_date_and_time',
   ),
-  'STATUS' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_STATUS',
-    'width' => '10%',
-    'default' => true,
-  ),
   'K_SWAP' => 
   array (
     'type' => 'enum',
     'default' => true,
     'label' => 'LBL_K_SWAP',
     'width' => '10%',
+    'name' => 'k_swap',
   ),
   'TOTAL' => 
   array (
@@ -203,6 +216,7 @@ $popupMeta = array (
     'label' => 'LBL_DAYS_TO_PAY',
     'width' => '10%',
     'default' => true,
+    'name' => 'days_to_pay',
   ),
   'DATE_ENTERED' => 
   array (

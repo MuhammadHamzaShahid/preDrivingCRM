@@ -169,8 +169,8 @@ array (
           ),
           1 => 
           array (
-            'name' => 'status',
-            'label' => 'LBL_STATUS',
+            'name' => 'k_status',
+            'label' => 'LBL_K_STATUS',
           ),
         ),
       ),
@@ -185,75 +185,66 @@ array (
           ),
           1 => 
           array (
-            'name' => 'k_transaction_type',
-            'label' => 'LBL_K_TRANSACTION_TYPE',
+            'name' => 'refund',
+            'label' => 'LBL_REFUND',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'refund',
-            'label' => 'LBL_REFUND',
+            'name' => 'k_refund_date',
+            'label' => 'LBL_K_REFUND_DATE',
           ),
           1 => 
           array (
-            'name' => 'k_refund_date',
-            'label' => 'LBL_K_REFUND_DATE',
+            'name' => 'k_swap',
+            'label' => 'LBL_K_SWAP',
           ),
         ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'k_swap',
-            'label' => 'LBL_K_SWAP',
+            'name' => 'cancelled_by',
+            'label' => 'LBL_CANCELLED_BY',
           ),
           1 => 
           array (
-            'name' => 'cancelled_by',
-            'label' => 'LBL_CANCELLED_BY',
+            'name' => 'cancelled_dvsa',
+            'label' => 'LBL_CANCELLED_DVSA',
           ),
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'cancelled_dvsa',
-            'label' => 'LBL_CANCELLED_DVSA',
+            'name' => 'confirmation_reminder',
+            'label' => 'LBL_CONFIRMATION_REMINDER',
           ),
           1 => 
           array (
-            'name' => 'confirmation_reminder',
-            'label' => 'LBL_CONFIRMATION_REMINDER',
+            'name' => 'days_to_pay',
+            'label' => 'LBL_DAYS_TO_PAY',
           ),
         ),
         4 => 
         array (
           0 => 
           array (
-            'name' => 'days_to_pay',
-            'label' => 'LBL_DAYS_TO_PAY',
-          ),
-          1 => 
-          array (
             'name' => 'reminder',
             'label' => 'LBL_REMINDER',
           ),
+          1 => 'description',
         ),
         5 => 
         array (
-          0 => 'description',
-          1 => 'assigned_user_name',
-        ),
-        6 => 
-        array (
-          0 => 
+          0 => 'assigned_user_name',
+          1 => 
           array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => '',
         ),
       ),
     ),
