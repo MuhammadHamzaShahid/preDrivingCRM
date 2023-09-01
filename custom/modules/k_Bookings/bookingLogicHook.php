@@ -92,8 +92,8 @@ class bookingLogicHookClass
 
                 if ($bean->contacts_id != '') {
                     // Check if the total field has changed
-                    $previousTotal = $bean->fetched_row['total'];
-                    if ($bean->total != $previousTotal) {
+                    // $previousTotal = $bean->fetched_row['total'];
+                    // if ($bean->total != $previousTotal) {
                         // Retrieve the Contacts bean
                         $contactsBean = BeanFactory::getBean('Contacts', $bean->contacts_id);
                 
@@ -144,6 +144,6 @@ class bookingLogicHookClass
 
             //     $contactsBean->save();
             // } 
-    }
 }
+
 
