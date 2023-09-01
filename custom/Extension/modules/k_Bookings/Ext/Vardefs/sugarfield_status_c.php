@@ -1,9 +1,9 @@
 <?php
-$dictionary['k_Bookings']['fields']['status'] = array(
-    'name' => 'status',
-    'vname' => 'LBL_STATUS',
+$dictionary['k_Bookings']['fields']['k_status'] = array(
+    'name' => 'k_status',
+    'vname' => 'LBL_K_STATUS',
     'type' => 'enum',
-    'options' => 'status_list',
+    'options' => 'k_status_list',
     'required' => false,
     'audited' => true,
 );

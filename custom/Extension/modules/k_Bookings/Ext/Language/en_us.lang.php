@@ -2,7 +2,7 @@
 $mod_strings['LBL_LI_LICENSE_NAME'] = 'License';
 $mod_strings['LBL_CONTACTS_NAME'] = 'Customer';
 $mod_strings['LBL_ACCOUNTS_NAME'] = 'Account';
-$mod_strings['LBL_STATUS'] = 'Status';
+$mod_strings['LBL_K_STATUS'] = 'Status';
 $mod_strings['LBL_K_DATE_AND_TIME'] = 'Date & Time';
 $mod_strings['LBL_CANCELLED_BY'] = 'Cancelled By';
 $mod_strings['LBL_REFUND'] = 'Refund';
