@@ -3,8 +3,6 @@
       '' => '',
       'Direct' => 'Direct',
       'Confirmed' => 'Confirmed',
-      'Paid' => 'Paid',
       'On Hold' => 'On Hold',
       'Cancelled' => 'Cancelled',
-      'Refund' => 'Refund',
     );

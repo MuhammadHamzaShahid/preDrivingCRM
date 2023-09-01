@@ -16,6 +16,13 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'K_TRANSACTION_TYPE' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_TRANSACTION_TYPE',
+    'width' => '10%',
+    'default' => true,
+  ),
   'ACCOUNTS_NAME' => 
   array (
     'type' => 'relate',

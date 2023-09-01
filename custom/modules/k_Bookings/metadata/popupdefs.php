@@ -15,6 +15,7 @@ $popupMeta = array (
   'date_modified' => 'k_bookings.date_modified',
   'created_by_name' => 'k_bookings.created_by_name',
   'k_status' => 'k_bookings.k_status',
+  'k_transaction_type' => 'k_bookings.k_transaction_type',
 ),
     'searchInputs' => array (
   5 => 'contacts_name',
@@ -28,6 +29,7 @@ $popupMeta = array (
   16 => 'date_modified',
   17 => 'created_by_name',
   18 => 'k_status',
+  19 => 'k_transaction_type',
 ),
     'searchdefs' => array (
   'name' => 
@@ -67,6 +69,13 @@ $popupMeta = array (
     'label' => 'LBL_K_STATUS',
     'width' => '10%',
     'name' => 'k_status',
+  ),
+  'k_transaction_type' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_TRANSACTION_TYPE',
+    'width' => '10%',
+    'name' => 'k_transaction_type',
   ),
   'k_buyer_name' => 
   array (
@@ -141,6 +150,14 @@ $popupMeta = array (
     'width' => '10%',
     'default' => true,
     'name' => 'k_status',
+  ),
+  'K_TRANSACTION_TYPE' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_K_TRANSACTION_TYPE',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_transaction_type',
   ),
   'K_TEST_CENTER' => 
   array (

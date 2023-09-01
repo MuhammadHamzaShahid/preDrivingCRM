@@ -74,6 +74,38 @@ array (
         'default' => true,
         'name' => 'li_license_name',
       ),
+      'k_unpaid_amount' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_UNPAID_AMOUNT',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_unpaid_amount',
+      ),
+      'k_paid_amount' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_PAID_AMOUNT',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_paid_amount',
+      ),
+      'k_credit_amount' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_CREDIT_AMOUNT',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_credit_amount',
+      ),
+      'k_refund_amount' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_REFUND_AMOUNT',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_refund_amount',
+      ),
       'amount' => 
       array (
         'type' => 'varchar',

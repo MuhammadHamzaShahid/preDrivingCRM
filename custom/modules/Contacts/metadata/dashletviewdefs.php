@@ -92,6 +92,7 @@ $dashletData['ContactsDashlet']['columns'] = array (
     'id' => 'ACCOUNT_ID',
     'width' => '10%',
     'default' => true,
+    'name' => 'account_name',
   ),
   'buyer_type' => 
   array (

@@ -93,6 +93,34 @@ array (
     'label' => 'LBL_PAYMENT_TYPE',
     'width' => '10%',
   ),
+  'K_UNPAID_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_UNPAID_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_PAID_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PAID_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_CREDIT_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_CREDIT_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_REFUND_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REFUND_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
   'AMOUNT' => 
   array (
     'type' => 'varchar',

@@ -58,6 +58,14 @@ array (
         'default' => true,
         'name' => 'k_status',
       ),
+      'k_transaction_type' => 
+      array (
+        'type' => 'enum',
+        'label' => 'LBL_K_TRANSACTION_TYPE',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_transaction_type',
+      ),
       'k_test_prority' => 
       array (
         'type' => 'enum',

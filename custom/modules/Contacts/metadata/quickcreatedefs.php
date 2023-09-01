@@ -90,16 +90,42 @@ array (
         array (
           0 => 
           array (
-            'name' => 'payment_type',
-            'label' => 'LBL_PAYMENT_TYPE',
+            'name' => 'k_unpaid_amount',
+            'label' => 'LBL_K_UNPAID_AMOUNT',
           ),
           1 => 
+          array (
+            'name' => 'k_paid_amount',
+            'label' => 'LBL_K_PAID_AMOUNT',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_credit_amount',
+            'label' => 'LBL_K_CREDIT_AMOUNT',
+          ),
+          1 => 
+          array (
+            'name' => 'k_refund_amount',
+            'label' => 'LBL_K_REFUND_AMOUNT',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
           array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
           ),
+          1 => 
+          array (
+            'name' => 'payment_type',
+            'label' => 'LBL_PAYMENT_TYPE',
+          ),
         ),
-        4 => 
+        6 => 
         array (
           0 => 
           array (
@@ -113,7 +139,7 @@ array (
             'label' => 'LBL_DESCRIPTION',
           ),
         ),
-        5 => 
+        7 => 
         array (
           0 => 
           array (
@@ -121,24 +147,18 @@ array (
           ),
           1 => 
           array (
-            'name' => 'date_entered',
-            'comment' => 'Date record created',
-            'label' => 'LBL_DATE_ENTERED',
-          ),
-        ),
-        6 => 
-        array (
-          0 => 
-          array (
-            'name' => 'date_modified',
-            'comment' => 'Date record last modified',
-            'label' => 'LBL_DATE_MODIFIED',
-          ),
-          1 => 
-          array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_total_payment',
+            'label' => 'LBL_K_TOTAL_PAYMENT',
+          ),
+          1 => '',
         ),
       ),
     ),

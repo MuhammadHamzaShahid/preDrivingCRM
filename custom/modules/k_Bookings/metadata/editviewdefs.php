@@ -173,6 +173,15 @@ array (
             'label' => 'LBL_K_STATUS',
           ),
         ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_transaction_type',
+            'label' => 'LBL_K_TRANSACTION_TYPE',
+          ),
+          1 => '',
+        ),
       ),
       'default' => 
       array (

@@ -18,6 +18,10 @@ $popupMeta = array (
   'created_by_name' => 'contacts.created_by_name',
   'assigned_user_name' => 'contacts.assigned_user_name',
   'li_license_name' => 'contacts.li_license_name',
+  'k_unpaid_amount' => 'contacts.k_unpaid_amount',
+  'k_paid_amount' => 'contacts.k_paid_amount',
+  'k_credit_amount' => 'contacts.k_credit_amount',
+  'k_refund_amount' => 'contacts.k_refund_amount',
 ),
     'searchInputs' => array (
   3 => 'email',
@@ -34,6 +38,10 @@ $popupMeta = array (
   15 => 'created_by_name',
   16 => 'assigned_user_name',
   17 => 'li_license_name',
+  18 => 'k_unpaid_amount',
+  19 => 'k_paid_amount',
+  20 => 'k_credit_amount',
+  21 => 'k_refund_amount',
 ),
     'create' => array (
   'formBase' => 'ContactFormBase.php',
@@ -110,6 +118,34 @@ $popupMeta = array (
     'label' => 'LBL_PRIORITY',
     'width' => '10%',
     'name' => 'priority',
+  ),
+  'k_unpaid_amount' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_UNPAID_AMOUNT',
+    'width' => '10%',
+    'name' => 'k_unpaid_amount',
+  ),
+  'k_paid_amount' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PAID_AMOUNT',
+    'width' => '10%',
+    'name' => 'k_paid_amount',
+  ),
+  'k_credit_amount' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_CREDIT_AMOUNT',
+    'width' => '10%',
+    'name' => 'k_credit_amount',
+  ),
+  'k_refund_amount' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REFUND_AMOUNT',
+    'width' => '10%',
+    'name' => 'k_refund_amount',
   ),
   'amount' => 
   array (
@@ -221,6 +257,7 @@ $popupMeta = array (
     'id' => 'LI_LICENSE_ID',
     'width' => '10%',
     'default' => true,
+    'name' => 'li_license_name',
   ),
   'BUYER_TYPE' => 
   array (
@@ -237,6 +274,34 @@ $popupMeta = array (
     'label' => 'LBL_PRIORITY',
     'width' => '10%',
     'name' => 'priority',
+  ),
+  'K_UNPAID_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_UNPAID_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_PAID_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PAID_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_CREDIT_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_CREDIT_AMOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_REFUND_AMOUNT' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_REFUND_AMOUNT',
+    'width' => '10%',
+    'default' => true,
   ),
   'AMOUNT' => 
   array (
@@ -270,6 +335,7 @@ $popupMeta = array (
     'label' => 'LBL_DATE_ENTERED',
     'width' => '10%',
     'default' => true,
+    'name' => 'date_entered',
   ),
   'DATE_MODIFIED' => 
   array (
@@ -277,6 +343,7 @@ $popupMeta = array (
     'label' => 'LBL_DATE_MODIFIED',
     'width' => '10%',
     'default' => true,
+    'name' => 'date_modified',
   ),
   'CREATED_BY_NAME' => 
   array (
@@ -286,6 +353,7 @@ $popupMeta = array (
     'id' => 'CREATED_BY',
     'width' => '10%',
     'default' => true,
+    'name' => 'created_by_name',
   ),
 ),
 );

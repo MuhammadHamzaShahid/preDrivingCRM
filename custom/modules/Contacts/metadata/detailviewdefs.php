@@ -192,16 +192,42 @@ array (
         array (
           0 => 
           array (
-            'name' => 'payment_type',
-            'label' => 'LBL_PAYMENT_TYPE',
+            'name' => 'k_unpaid_amount',
+            'label' => 'LBL_K_UNPAID_AMOUNT',
           ),
           1 => 
+          array (
+            'name' => 'k_paid_amount',
+            'label' => 'LBL_K_PAID_AMOUNT',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_credit_amount',
+            'label' => 'LBL_K_CREDIT_AMOUNT',
+          ),
+          1 => 
+          array (
+            'name' => 'k_refund_amount',
+            'label' => 'LBL_K_REFUND_AMOUNT',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
           array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
           ),
+          1 => 
+          array (
+            'name' => 'payment_type',
+            'label' => 'LBL_PAYMENT_TYPE',
+          ),
         ),
-        4 => 
+        6 => 
         array (
           0 => 
           array (
@@ -215,7 +241,7 @@ array (
             'label' => 'LBL_DESCRIPTION',
           ),
         ),
-        5 => 
+        7 => 
         array (
           0 => 
           array (
@@ -229,7 +255,7 @@ array (
             'label' => 'LBL_DATE_ENTERED',
           ),
         ),
-        6 => 
+        8 => 
         array (
           0 => 
           array (
@@ -243,7 +269,7 @@ array (
             'label' => 'LBL_CREATED',
           ),
         ),
-        7 => 
+        9 => 
         array (
           0 => 
           array (

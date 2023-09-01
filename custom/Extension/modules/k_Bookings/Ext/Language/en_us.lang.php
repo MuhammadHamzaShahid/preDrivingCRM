@@ -2,7 +2,7 @@
 $mod_strings['LBL_LI_LICENSE_NAME'] = 'License';
 $mod_strings['LBL_CONTACTS_NAME'] = 'Customer';
 $mod_strings['LBL_ACCOUNTS_NAME'] = 'Account';
-$mod_strings['LBL_K_STATUS'] = 'Status';
+$mod_strings['LBL_K_STATUS'] = 'Booking Status';
 $mod_strings['LBL_K_DATE_AND_TIME'] = 'Date & Time';
 $mod_strings['LBL_CANCELLED_BY'] = 'Cancelled By';
 $mod_strings['LBL_REFUND'] = 'Refund';
@@ -32,7 +32,7 @@ $mod_strings['LBL_K_SWAP_FEE'] = 'Swap Fee';
 $mod_strings['LBL_K_MANAGEMENT_FEE'] = 'Management Fee';
 $mod_strings['LBL_K_REFUND_DATE'] = 'Refund Date';
 $mod_strings['LBL_K_PAYMENT_METHOD'] = 'Payment Method';
-$mod_strings['LBL_K_TRANSACTION_TYPE'] = 'Payment Type';
+$mod_strings['LBL_K_TRANSACTION_TYPE'] = 'Payment Status';
 $mod_strings['LBL_K_TRANSACTIONS'] = 'Transactions';
 $mod_strings['LBL_K_TEST_PRIORITY'] = 'Test Priority';
 
