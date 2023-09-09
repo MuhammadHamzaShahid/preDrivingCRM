@@ -20,19 +20,19 @@ class bookingLogicHookClass
                 // $drivingReferenceNumber = trim($data[1]);
                 $lastDateToCancel = trim($data[3]);
                 $buyerName = trim($data[4]);
-                $totalAmount = str_replace('£', '', trim($data[8]));
+                // $totalAmount = str_replace('£', '', trim($data[8]));
                 $lastDateToCancelF= date('Y-m-d',strtotime($lastDateToCancel)); 
                 $dateTimeF= date('Y-m-d H:i:s',strtotime($dateTime)); 
 
             // Putting the trimmed values in their respective fields
-                $bean->name = $candidateName;
+                // $bean->name = $candidateName;
                 $bean->k_license_no = $drivingLicenseNumber;
                 $bean->k_test_center = $testCenter;
                 $bean->k_date_and_time = $dateTimeF;
                 $bean->k_driving_test_ref_no = $drivingReferenceNumber;
                 $bean->k_last_date =  $lastDateToCancelF;
                 $bean->k_buyer_name = $buyerName;
-                $bean->test_fee = $totalAmount;
+                // $bean->test_fee = $totalAmount;
             }
         }
     
@@ -88,6 +88,11 @@ class bookingLogicHookClass
             }
         }          
                 $bean->k_swap = 'No';
+
+                if(empty($bean->accounts_id)){
+                    $bean->discount = '';
+                }
+                
                 $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee -(float)$bean->discount;
 
                 if ($bean->contacts_id != '') {
@@ -116,7 +121,7 @@ class bookingLogicHookClass
                         $paidAmount = $contactsBean->k_paid_amount;
                         $creditAmount = $contactsBean->k_credit_amount;
                         $refundAmount = $contactsBean->k_refund_amount;
-                        $contactsBean->amount = (int)$unpaidAmount - (int)$paidAmount - (int)$creditAmount - (int)$refundAmount;
+                        $contactsBean->amount = (int)$unpaidAmount - (int)$paidAmount - (int)$creditAmount;
                         // Save the changes to the Contacts bean
                         $contactsBean->save();
                     }
