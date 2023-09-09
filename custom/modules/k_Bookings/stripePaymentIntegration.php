@@ -1,15 +1,18 @@
 <?php
 
-require_once 'custom/stripe-api/init.php';
+require_once 'custom/modules/k_Bookings/stripe-api/init.php';
    
 class stripePaymentIntegration {
         public function processStripePayment($bean, $event, $arguments)
         {
-        
         // Check if the payment status is set to "Unpaid" before processing the payment
         if (empty($bean->fetched_row['id'])) {
             // Stripe API initialization
+
+
+            //issue is in this line
             $stripe = new \Stripe\StripeClient('sk_test_51No6TRDFsKztdMU3MtY7OxycvHsaKjhAiSSqPG0lzfGngSoA3zCxW4MeemYI2aPuKNbNzkcKX7miGKrMU5rJ6nZA00BhRsvDc2');
+            die($stripe.'aa');
             $paymentIntent = $stripe->paymentIntents->create([
                 'amount' => $bean->total * 100,
                 'currency' => 'eur',
