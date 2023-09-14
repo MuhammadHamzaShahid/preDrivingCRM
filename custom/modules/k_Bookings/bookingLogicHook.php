@@ -13,26 +13,26 @@ class bookingLogicHookClass
         //    var_dump($data);
         //    die();
             if ($fieldCount >= 5) {
-                $candidateName = trim($data[4]);
-                $drivingLicenseNumber = trim($data[0]);
-                $testCenter = trim($data[2]);
-                $dateTime = trim($data[1]);
-                // $drivingReferenceNumber = trim($data[1]);
-                $lastDateToCancel = trim($data[3]);
-                // $buyerName = trim($data[4]);
-                // $totalAmount = str_replace('£', '', trim($data[8]));
+                // $candidateName = trim($data[4]);
+                // $drivingLicenseNumber = trim($data[0]);
+                $testCenter = trim($data[3]);
+                $dateTime = trim($data[2]);
+                $drivingReferenceNumber = trim($data[0]);
+                $lastDateToCancel = trim($data[4]);
+                $buyerName = trim($data[5]);
+                $totalAmount = str_replace('£', '', trim($data[6]));
                 $lastDateToCancelF= date('Y-m-d',strtotime($lastDateToCancel)); 
                 $dateTimeF= date('Y-m-d H:i:s',strtotime($dateTime)); 
 
             // Putting the trimmed values in their respective fields
-                $bean->name = $candidateName;
-                $bean->k_license_no = $drivingLicenseNumber;
+                // $bean->name = $candidateName;
+                // $bean->k_license_no = $drivingLicenseNumber;
                 $bean->k_test_center = $testCenter;
                 $bean->k_date_and_time = $dateTimeF;
                 $bean->k_driving_test_ref_no = $drivingReferenceNumber;
                 $bean->k_last_date =  $lastDateToCancelF;
-                // $bean->k_buyer_name = $buyerName;
-                // $bean->test_fee = $totalAmount;
+                $bean->k_buyer_name = $buyerName;
+                $bean->test_fee = $totalAmount;
             }
         }
     

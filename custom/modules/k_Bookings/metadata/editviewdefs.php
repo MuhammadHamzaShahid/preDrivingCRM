@@ -51,7 +51,11 @@ array (
             'name' => 'k_test_detail',
             'label' => 'LBL_K_TEST_DETAIL',
           ),
-          1 => 'name',
+          1 => 
+          array (
+            'name' => 'k_buyer_name',
+            'label' => 'LBL_K_BUYER_NAME',
+          ),
         ),
         1 => 
         array (
@@ -86,11 +90,7 @@ array (
             'name' => 'k_last_date',
             'label' => 'LBL_K_LAST_DATE',
           ),
-          1 => 
-          array (
-            'name' => 'k_buyer_name',
-            'label' => 'LBL_K_BUYER_NAME',
-          ),
+          1 => 'name',
         ),
         4 => 
         array (
