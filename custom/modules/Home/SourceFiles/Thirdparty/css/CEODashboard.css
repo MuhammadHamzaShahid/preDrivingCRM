@@ -1,0 +1,277 @@
+﻿.ceodashboard .board {
+    width: 100%;
+	/* margin: 60px auto; */
+	/* height: 500px; */
+	background: #fff;
+/*box-shadow: 10px 10px #ccc,-10px 20px #ddd;*/
+}
+
+.ceodashboard .board .nav-tabs {
+    position: relative;
+    /* border-bottom: 0; */
+    /* width: 80%; */
+    /* margin: 40px auto; */
+    margin-bottom: 0;
+    box-sizing: border-box;
+
+}
+.ceodashboard .board > div.board-inner{
+    background: #fafafa url(http://subtlepatterns.com/patterns/geometry2.png);
+    background-size: 30%;
+}
+.ceodashboard p.narrow{
+    width: 60%;
+    margin: 10px auto;
+}
+.ceodashboard .liner{
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.ceodashboard .nav-tabs > li.active > a, .ceodashboard .nav-tabs > li.active > a:hover, .ceodashboard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    /* background-color: #ffffff; */
+    border: 0;
+    border-bottom-color: transparent;
+}
+.ceodashboard span.round-tabs{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+.ceodashboard span.round-tabs.one{
+    color: rgb(34, 194, 34);border: 2px solid rgb(34, 194, 34);
+}
+.ceodashboard li.active span.round-tabs.one{
+    background: #fff !important;
+    border: 2px solid #ddd;
+    color: rgb(34, 194, 34);
+}
+.ceodashboard span.round-tabs.two{
+    color: #febe29;border: 2px solid #febe29;
+}
+.ceodashboard li.active span.round-tabs.two{
+    background: #fff !important;
+    border: 2px solid #ddd;
+    color: #febe29;
+}
+
+.ceodashboard span.round-tabs.three{
+    color: #3e5e9a;border: 2px solid #3e5e9a;
+}
+.ceodashboard li.active span.round-tabs.three{
+    background: #fff !important;
+    border: 2px solid #ddd;
+    color: #3e5e9a;
+}
+
+.ceodashboard span.round-tabs.four{
+    color: #f1685e;border: 2px solid #f1685e;
+}
+.ceodashboard span.round-tabs.five{
+    color: #999;border: 2px solid #999;
+}
+
+.ceodashboard li.active span.round-tabs.five{
+    background: #fff !important;
+    border: 2px solid #ddd;
+    color: #999;
+}
+.ceodashboard .nav-tabs > li.active > a span.round-tabs{
+    background: #fafafa;
+}
+.ceodashboard .nav-tabs > li {
+    width: 20%;
+}
+.ceodashboard .nav-tabs > li:after {
+    content: " ";
+    position: absolute;
+    left: 45%;
+   opacity:0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #ddd;
+    transition:0.1s ease-in-out;
+    
+}
+.ceodashboard .nav-tabs > li.active:after {
+    content: " ";
+    position: absolute;
+    left: 45%;
+   opacity:1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #ddd;
+    
+}
+.ceodashboard .nav-tabs > li a{
+   width: 70px;
+   height: 70px;
+   margin: 20px auto;
+   border-radius: 100%;
+   padding: 0;
+}
+
+.ceodashboard .nav-tabs > li a:hover{
+    background: transparent;
+}
+.ceodashboard .tab-content{
+}
+.ceodashboard .tab-pane{
+   position: relative;
+    padding-top: 5px;
+}
+.ceodashboard .tab-content .head{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.ceodashboard .btn-outline-rounded{
+    padding: 10px 40px;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    border-radius: 25px;
+}
+.ceodashboard .btn.green{
+    background-color:#5cb85c;
+    /*border: 2px solid #5cb85c;*/
+    color: #ffffff;
+}
+/***********************************/
+
+.ceodashboard .pc2 .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*max-width: 250px;*/
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.ceodashboard .pc .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.ceodashboard .pc button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.ceodashboard .pc button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.ceodashboard .pc .sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    /*top: 40;*/
+    /*left: 0;*/
+    overflow-x: hidden;
+    /*padding-top: 20px;*/
+}
+
+
+.ceodashboard .panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ceodashboard .panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.ceodashboard .panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.ceodashboard .panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.ceodashboard .panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ceodashboard .panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.ceodashboard .accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+.ceodashboard .accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.ceodashboard .accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+.ceodashboard .accordion-option .toggle-accordion:before {
+  content: "Expand All";
+}
+
+.ceodashboard .accordion-option .toggle-accordion.active:before {
+  content: "Collapse All";
+}
