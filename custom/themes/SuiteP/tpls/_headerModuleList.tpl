@@ -161,10 +161,11 @@
             </div>
         </div>
         <div class="desktop-toolbar" id="toolbar">
+        <button style="float:right; margin-top:10px; background-color: #d66c60 !important; outline:none;" type="button" class="btn btn-primary" onclick="document.location.href='index.php?module=Home&action=home'">View Analytics</button>
             {if $USE_GROUP_TABS}
                 <ul class="nav navbar-nav">
                     <li class="navbar-brand-container">
-                            <a class="navbar-brand with-home-icon suitepicon suitepicon-action-home" href="index.php?module=Home&action=home"></a>
+                            <a class="navbar-brand with-home-icon suitepicon suitepicon-action-home" href="index.php?module=Home&action=index"></a>
                     </li>
                     {assign var="groupSelected" value=false}
                     {foreach from=$moduleTopMenu item=module key=name name=moduleList}
@@ -332,7 +333,7 @@
 
                 <ul class="nav navbar-nav navbar-horizontal-fluid">
                     <li class="navbar-brand-container">
-                        <a class="navbar-brand with-home-icon" href="index.php?module=Home&action=home">
+                        <a class="navbar-brand with-home-icon" href="index.php?module=Home&action=index">
                             <span class="suitepicon suitepicon-action-home"></span>
                         </a>
                     </li>
