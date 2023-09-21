@@ -103,6 +103,7 @@ class bookingLogicHookClass
                         $contactsBean = BeanFactory::getBean('Contacts', $bean->contacts_id);
                 
                         // Compute the new values based on the k_transaction_type
+                        if($bean->k_transaction_type != $bean->fetched_row['k_transaction_type']){
                         if ($bean->k_transaction_type == 'Unpaid') {
                             $unpaid = $bean->total;
                             $contactsBean->k_unpaid_amount = $unpaid;
@@ -149,6 +150,7 @@ class bookingLogicHookClass
 
             //     $contactsBean->save();
             // } 
+    }
 }
 
 
