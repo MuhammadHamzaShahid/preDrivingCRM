@@ -51,9 +51,26 @@ array (
             'name' => 'k_test_detail',
             'label' => 'LBL_K_TEST_DETAIL',
           ),
-          1 => 'name',
+          1 => 
+          array (
+            'name' => 'k_buyer_name',
+            'label' => 'LBL_K_BUYER_NAME',
+          ),
         ),
         1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_email',
+            'label' => 'LBL_K_EMAIL',
+          ),
+          1 => 
+          array (
+            'name' => 'k_phone_no',
+            'label' => 'LBL_K_PHONE_NO',
+          ),
+        ),
+        2 => 
         array (
           0 => 
           array (
@@ -66,7 +83,7 @@ array (
             'label' => 'LBL_K_TEST_CENTER',
           ),
         ),
-        2 => 
+        3 => 
         array (
           0 => 
           array (
@@ -79,20 +96,16 @@ array (
             'label' => 'LBL_K_DRIVING_TEST_REF_NO',
           ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (
             'name' => 'k_last_date',
             'label' => 'LBL_K_LAST_DATE',
           ),
-          1 => 
-          array (
-            'name' => 'k_buyer_name',
-            'label' => 'LBL_K_BUYER_NAME',
-          ),
+          1 => 'name',
         ),
-        4 => 
+        5 => 
         array (
           0 => 
           array (
@@ -105,7 +118,7 @@ array (
             'label' => 'LBL_COMMISSION',
           ),
         ),
-        5 => 
+        6 => 
         array (
           0 => 
           array (
@@ -118,7 +131,7 @@ array (
             'label' => 'LBL_K_TEST_PRIORITY',
           ),
         ),
-        6 => 
+        7 => 
         array (
           0 => 
           array (
@@ -131,7 +144,7 @@ array (
             'label' => 'LBL_VAT',
           ),
         ),
-        7 => 
+        8 => 
         array (
           0 => 
           array (
@@ -172,6 +185,15 @@ array (
             'name' => 'k_status',
             'label' => 'LBL_K_STATUS',
           ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'k_transaction_type',
+            'label' => 'LBL_K_TRANSACTION_TYPE',
+          ),
+          1 => '',
         ),
       ),
       'default' => 

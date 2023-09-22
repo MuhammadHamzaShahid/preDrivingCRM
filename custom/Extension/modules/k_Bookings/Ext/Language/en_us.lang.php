@@ -37,6 +37,8 @@ $mod_strings['LBL_K_TRANSACTIONS'] = 'Transactions';
 $mod_strings['LBL_K_TEST_PRIORITY'] = 'Test Priority';
 $mod_strings['LBL_STRIPE_PAYMENT_ID'] = 'Stripe Payment Id';
 $mod_strings['LBL_STRIPE_CHECKOUT_URL'] = 'Stripe Checkout URL';
+$mod_strings['LBL_K_PHONE_NO'] = 'Phone Number';
+$mod_strings['LBL_K_EMAIL'] = 'Email';
 
 
 

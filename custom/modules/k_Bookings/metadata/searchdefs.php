@@ -82,6 +82,22 @@ array (
         'default' => true,
         'name' => 'k_swap_count',
       ),
+      'k_email' => 
+      array (
+        'type' => 'email',
+        'label' => 'LBL_K_EMAIL',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_email',
+      ),
+      'k_phone_no' => 
+      array (
+        'type' => 'varchar',
+        'label' => 'LBL_K_PHONE_NO',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'k_phone_no',
+      ),
       'k_buyer_name' => 
       array (
         'type' => 'varchar',

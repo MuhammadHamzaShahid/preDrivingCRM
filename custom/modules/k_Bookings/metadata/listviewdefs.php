@@ -41,6 +41,20 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'K_PHONE_NO' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PHONE_NO',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'K_EMAIL' => 
+  array (
+    'type' => 'email',
+    'label' => 'LBL_K_EMAIL',
+    'width' => '10%',
+    'default' => true,
+  ),
   'CONTACTS_NAME' => 
   array (
     'type' => 'relate',

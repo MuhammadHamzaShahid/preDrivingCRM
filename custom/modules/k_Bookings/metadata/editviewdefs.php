@@ -61,6 +61,19 @@ array (
         array (
           0 => 
           array (
+            'name' => 'k_email',
+            'label' => 'LBL_K_EMAIL',
+          ),
+          1 => 
+          array (
+            'name' => 'k_phone_no',
+            'label' => 'LBL_K_PHONE_NO',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
             'name' => 'k_license_no',
             'label' => 'LBL_K_LICENSE_NO',
           ),
@@ -70,7 +83,7 @@ array (
             'label' => 'LBL_K_TEST_CENTER',
           ),
         ),
-        2 => 
+        3 => 
         array (
           0 => 
           array (
@@ -83,7 +96,7 @@ array (
             'label' => 'LBL_K_DRIVING_TEST_REF_NO',
           ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (
@@ -92,7 +105,7 @@ array (
           ),
           1 => 'name',
         ),
-        4 => 
+        5 => 
         array (
           0 => 
           array (
@@ -105,7 +118,7 @@ array (
             'label' => 'LBL_COMMISSION',
           ),
         ),
-        5 => 
+        6 => 
         array (
           0 => 
           array (
@@ -118,7 +131,7 @@ array (
             'label' => 'LBL_K_TEST_PRIORITY',
           ),
         ),
-        6 => 
+        7 => 
         array (
           0 => 
           array (
@@ -131,7 +144,7 @@ array (
             'label' => 'LBL_VAT',
           ),
         ),
-        7 => 
+        8 => 
         array (
           0 => 
           array (

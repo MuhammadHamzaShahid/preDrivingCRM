@@ -12,6 +12,14 @@ $dashletData['k_BookingsDashlet']['searchFields'] = array (
   array (
     'default' => '',
   ),
+  'k_email' => 
+  array (
+    'default' => '',
+  ),
+  'k_phone_no' => 
+  array (
+    'default' => '',
+  ),
   'k_driving_test_ref_no' => 
   array (
     'default' => '',
@@ -196,6 +204,20 @@ $dashletData['k_BookingsDashlet']['columns'] = array (
     'width' => '10%',
     'default' => false,
     'name' => 'k_test_detail',
+  ),
+  'k_phone_no' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PHONE_NO',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'k_email' => 
+  array (
+    'type' => 'email',
+    'label' => 'LBL_K_EMAIL',
+    'width' => '10%',
+    'default' => false,
   ),
   'k_last_date' => 
   array (

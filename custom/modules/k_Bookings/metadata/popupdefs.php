@@ -16,6 +16,8 @@ $popupMeta = array (
   'created_by_name' => 'k_bookings.created_by_name',
   'k_status' => 'k_bookings.k_status',
   'k_transaction_type' => 'k_bookings.k_transaction_type',
+  'k_phone_no' => 'k_bookings.k_phone_no',
+  'k_email' => 'k_bookings.k_email',
 ),
     'searchInputs' => array (
   5 => 'contacts_name',
@@ -30,6 +32,8 @@ $popupMeta = array (
   17 => 'created_by_name',
   18 => 'k_status',
   19 => 'k_transaction_type',
+  20 => 'k_phone_no',
+  21 => 'k_email',
 ),
     'searchdefs' => array (
   'name' => 
@@ -76,6 +80,20 @@ $popupMeta = array (
     'label' => 'LBL_K_TRANSACTION_TYPE',
     'width' => '10%',
     'name' => 'k_transaction_type',
+  ),
+  'k_phone_no' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PHONE_NO',
+    'width' => '10%',
+    'name' => 'k_phone_no',
+  ),
+  'k_email' => 
+  array (
+    'type' => 'email',
+    'label' => 'LBL_K_EMAIL',
+    'width' => '10%',
+    'name' => 'k_email',
   ),
   'k_buyer_name' => 
   array (
@@ -210,6 +228,22 @@ $popupMeta = array (
     'width' => '10%',
     'default' => true,
     'name' => 'k_date_and_time',
+  ),
+  'K_EMAIL' => 
+  array (
+    'type' => 'email',
+    'label' => 'LBL_K_EMAIL',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_email',
+  ),
+  'K_PHONE_NO' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_K_PHONE_NO',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'k_phone_no',
   ),
   'K_SWAP' => 
   array (
