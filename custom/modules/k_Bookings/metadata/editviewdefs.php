@@ -153,6 +153,14 @@ array (
           ),
           1 => 
           array (
+            'name' => 'k_handling_fee',
+            'label' => 'LBL_K_HANDLING_FEE',
+          ),
+        ),
+        9 => 
+        array (
+          0 => 
+          array (
             'name' => 'total',
             'label' => 'LBL_TOTAL',
           ),

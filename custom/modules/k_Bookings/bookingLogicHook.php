@@ -28,6 +28,7 @@ class bookingLogicHookClass
                     $bean->k_last_date =  $lastDateToCancelF;
                     $bean->k_buyer_name = $buyerName;
                     $bean->test_fee = $totalAmount;
+                    $bean->k_handling_fee = $totalAmount * 0.032;
                 }
             }
         }
@@ -82,7 +83,7 @@ class bookingLogicHookClass
             $bean->discount = '';
         }
 
-        $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee -(float)$bean->discount;
+        $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee + (float)$bean->k_handling_fee -(float)$bean->discount;
 
         if ($bean->contacts_id != '') {    
             // Compute the new values based on the k_transaction_type
