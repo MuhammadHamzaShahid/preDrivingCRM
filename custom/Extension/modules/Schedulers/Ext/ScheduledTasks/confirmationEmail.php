@@ -6,7 +6,7 @@ array_push($job_strings, 'confirmationEmail');
 function confirmationEmail()
 {
     global $current_user,$db;
-    $result = $db->query("SELECT id, k_email, k_buyer_name, k_test_center, k_date_and_time, k_driving_test_ref_no, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed'");
+    $result = $db->query("SELECT id, k_email, k_buyer_name, k_test_center, k_date_and_time, k_driving_test_ref_no FROM k_bookings WHERE k_status = 'Confirmed' AND TIMESTAMPDIFF(HOUR, k_date_and_time, NOW()) >= 24");
     while ($row = $db->fetchByAssoc($result)) {
     $emailAddress = $row['k_email'];
     $name = $row['k_buyer_name'];
