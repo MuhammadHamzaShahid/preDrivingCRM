@@ -6,7 +6,7 @@ array_push($job_strings, 'confirmationEmail');
 function confirmationEmail()
 {
     global $current_user,$db;
-    $result = $db->query("SELECT id, k_email, k_buyer_name, k_test_center, k_date_and_time, k_driving_test_ref_no FROM k_bookings WHERE k_status = 'Confirmed' AND TIMESTAMPDIFF(HOUR, k_date_and_time, NOW()) >= 24");
+    $result = $db->query("SELECT id, k_email, k_buyer_name, k_test_center, k_date_and_time, k_driving_test_ref_no FROM k_bookings WHERE k_status = 'Confirmed' AND TIMESTAMPDIFF(HOUR, k_date_and_time, NOW()) = 24");
     while ($row = $db->fetchByAssoc($result)) {
     $emailAddress = $row['k_email'];
     $name = $row['k_buyer_name'];
@@ -44,15 +44,15 @@ function smtp_mailer($to, $subject, $msg)
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'tls';
-    $mail->Host = "smtp.gmail.com";
-    $mail->Port = 587;
+    $mail->SMTPSecure = 'ssl';
+    $mail->Host = "smtp.hostinger.com";
+    $mail->Port = 465;
     $mail->IsHTML(true);
     $mail->CharSet = 'UTF-8';
     // $mail->SMTPDebug = 2;
-    $mail->Username = "donsurur@gmail.com";
-    $mail->Password = "mqhjdiexqybjhjaj";
-    $mail->SetFrom("donsurur@gmail.com");
+    $mail->Username = "sales@predriving.co.uk";
+    $mail->Password = "Sales@2023";
+    $mail->SetFrom("sales@predriving.co.uk");
     $mail->Subject = $subject;
     $mail->Body = $msg;
     $mail->AddAddress($to);
