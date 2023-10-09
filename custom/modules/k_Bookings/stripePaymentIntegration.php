@@ -7,7 +7,7 @@ class stripePaymentIntegration {
         public function processStripePayment($bean, $event, $arguments)
         {
         if ($bean->k_transaction_type == 'Unpaid') {
-            $stripe = new \Stripe\StripeClient('sk_test_yemJI7gbQmCTXewhvzpyY5Xr');
+            $stripe = new \Stripe\StripeClient('sk_live_NdcALSCDETFg6oNlV189y4Au');
             $checkout_session = $stripe->checkout->sessions->create([
             'line_items' => [[
                 'price_data' => [
