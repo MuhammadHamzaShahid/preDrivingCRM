@@ -5,8 +5,8 @@ class bookingLogicHookClass
 {
     public function bookingLogicHookMethod($bean, $event, $arguments)
     {
-        // Check if the test detail field has been update/edit
-        if (empty($bean->fetched_row) || $bean->k_test_detail != $bean->fetched_row['k_test_detail']){
+         // Check if the test detail field has been update/edit
+         if (empty($bean->fetched_row) || $bean->k_test_detail != $bean->fetched_row['k_test_detail']){
             if(!empty($bean->k_test_detail)){
                 // Extracting the data from the custom test detail field
                 $data =  preg_split('/\t+/', $bean->k_test_detail);
@@ -14,12 +14,21 @@ class bookingLogicHookClass
                 if ($fieldCount >= 5) {
                     // $candidateName = trim($data[4]);
                     // $drivingLicenseNumber = trim($data[0]);
-                    $testCenter = trim($data[3]);
-                    $dateTime = trim($data[2]);
-                    $drivingReferenceNumber = trim($data[0]);
-                    $lastDateToCancel = trim($data[4]);
-                    $buyerName = trim($data[5]);
-                    $totalAmount = str_replace('£', '', trim($data[6]));
+                    if(str_contains($data[2],'Car')){
+                        $dateTime = trim($data[3]);
+                        $testCenter = trim($data[4]);
+                        $drivingReferenceNumber = trim($data[0]);
+                        $lastDateToCancel = trim($data[5]);
+                        $buyerName = trim($data[6]);
+                        $totalAmount = str_replace('£', '', trim($data[7]));
+                    }else{
+                        $dateTime = trim($data[2]);
+                        $testCenter = trim($data[3]);
+                        $drivingReferenceNumber = trim($data[0]);
+                        $lastDateToCancel = trim($data[4]);
+                        $buyerName = trim($data[5]);
+                        $totalAmount = str_replace('£', '', trim($data[6]));
+                    }
                     $lastDateToCancelF= date('Y-m-d',strtotime($lastDateToCancel)); 
                     $dateTimeF= date('Y-m-d H:i:s',strtotime($dateTime)); 
                     $bean->k_test_center = $testCenter;
@@ -28,10 +37,10 @@ class bookingLogicHookClass
                     $bean->k_last_date =  $lastDateToCancelF;
                     $bean->k_buyer_name = $buyerName;
                     $bean->test_fee = $totalAmount;
-                    $bean->k_handling_fee = $totalAmount * 0.032;
                 }
             }
         }
+
         // Check if the swap field has been set to 'yes'
         if ($bean->k_swap === 'Yes') {
                 
@@ -82,7 +91,7 @@ class bookingLogicHookClass
         if (empty($bean->accounts_id)) {
             $bean->discount = '';
         }
-
+        $bean->k_handling_fee =  $bean->test_fee * 0.032;
         $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee + (float)$bean->k_handling_fee -(float)$bean->discount;
 
         if ($bean->contacts_id != '') {    

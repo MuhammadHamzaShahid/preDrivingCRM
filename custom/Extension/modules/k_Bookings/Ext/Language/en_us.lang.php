@@ -40,6 +40,7 @@ $mod_strings['LBL_STRIPE_CHECKOUT_URL'] = 'Stripe Checkout URL';
 $mod_strings['LBL_K_PHONE_NO'] = 'Phone Number';
 $mod_strings['LBL_K_EMAIL'] = 'Email';
 $mod_strings['LBL_K_HANDLING_FEE'] = 'Handling Fee';
+$mod_strings['LBL_K_LICENSE_PROVIDED'] = 'License Provided';
 
 
 
