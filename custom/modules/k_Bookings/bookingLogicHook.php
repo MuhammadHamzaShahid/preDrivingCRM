@@ -93,7 +93,7 @@ class bookingLogicHookClass
         }
         $bean->k_handling_fee =  $bean->test_fee * 0.032;
         $bean->total= (float)$bean->commission + (float)$bean->k_swap_fee + (float)$bean->test_fee + (float)$bean->k_handling_fee -(float)$bean->discount;
-
+        $bean->total=round($bean->total);
         if ($bean->contacts_id != '') {    
             // Compute the new values based on the k_transaction_type
             if($bean->k_transaction_type != $bean->fetched_row['k_transaction_type']){
@@ -116,5 +116,3 @@ class bookingLogicHookClass
         }
     }
 }
-
-
