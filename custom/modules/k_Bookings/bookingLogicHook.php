@@ -19,14 +19,14 @@ class bookingLogicHookClass
                         $testCenter = trim($data[4]);
                         $drivingReferenceNumber = trim($data[0]);
                         $lastDateToCancel = trim($data[5]);
-                        $buyerName = trim($data[6]);
+                        $candidateName = trim($data[6]);
                         $totalAmount = str_replace('£', '', trim($data[7]));
                     }else{
                         $dateTime = trim($data[2]);
                         $testCenter = trim($data[3]);
                         $drivingReferenceNumber = trim($data[0]);
                         $lastDateToCancel = trim($data[4]);
-                        $buyerName = trim($data[5]);
+                        $candidateName = trim($data[5]);
                         $totalAmount = str_replace('£', '', trim($data[6]));
                     }
                     $lastDateToCancelF= date('Y-m-d',strtotime($lastDateToCancel)); 
@@ -35,7 +35,8 @@ class bookingLogicHookClass
                     $bean->k_date_and_time = $dateTimeF;
                     $bean->k_driving_test_ref_no = $drivingReferenceNumber;
                     $bean->k_last_date =  $lastDateToCancelF;
-                    $bean->k_buyer_name = $buyerName;
+                    // $bean->k_buyer_name = $buyerName;
+                    $bean->name = $candidateName;
                     $bean->test_fee = $totalAmount;
                 }
             }
