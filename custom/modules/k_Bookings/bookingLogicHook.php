@@ -113,6 +113,6 @@ class bookingLogicHookClass
                 $contactsBean->save();
             }
         }
-        $bean->k_phone_no=trim($bean->k_phone_no);
+        $bean->k_phone_no=str_replace(" ", "", $bean->k_phone_no);
     }
 }
