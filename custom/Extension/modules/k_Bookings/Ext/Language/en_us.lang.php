@@ -41,6 +41,8 @@ $mod_strings['LBL_K_PHONE_NO'] = 'Phone Number';
 $mod_strings['LBL_K_EMAIL'] = 'Email';
 $mod_strings['LBL_K_HANDLING_FEE'] = 'Handling Fee';
 $mod_strings['LBL_K_LICENSE_PROVIDED'] = 'License Provided';
+$mod_strings['LBL_SEND_CONFIRMATION_EMAIL'] = 'Send Confirmation Email';
+$mod_strings['LBL_SEND_CONFIRMATION_WHATSAPP'] = 'Send Confirmation WhatsApp';
 
 
 
