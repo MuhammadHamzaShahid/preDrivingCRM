@@ -26,7 +26,7 @@ class k_BookingsViewDetail extends ViewDetail {
             function redirectToWatiChat(phoneNumber) {
                 const data = JSON.stringify({
                     broadcast_name: 'string',
-                    template_name: 'open_chat',
+                    template_name: 'new_chat',
                     parameters: [
                     {
                         name: 'string',
