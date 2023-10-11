@@ -12,7 +12,6 @@ class bookingLogicHookClass
                 $data =  preg_split('/\t+/', $bean->k_test_detail);
                 $fieldCount = count($data); 
                 if ($fieldCount >= 5) {
-                    // $candidateName = trim($data[4]);
                     // $drivingLicenseNumber = trim($data[0]);
                     if(str_contains($data[2],'Car')){
                         $dateTime = trim($data[3]);
@@ -35,7 +34,6 @@ class bookingLogicHookClass
                     $bean->k_date_and_time = $dateTimeF;
                     $bean->k_driving_test_ref_no = $drivingReferenceNumber;
                     $bean->k_last_date =  $lastDateToCancelF;
-                    // $bean->k_buyer_name = $buyerName;
                     $bean->name = $candidateName;
                     $bean->test_fee = $totalAmount;
                 }
@@ -57,10 +55,10 @@ class bookingLogicHookClass
            
                 // Check if the old test detail is empty
                 if (empty($bean->k_old_test_detail)) {
-                    $bean->k_old_test_detail = $bean->k_test_detail;
+                    $bean->k_old_test_detail = $bean->fetched_row['k_test_detail'];
                 } else {
                     $oldTestDetail = $bean->k_old_test_detail;
-                    $oldTestDetail .= "\n" . $bean->k_test_detail;
+                    $oldTestDetail .= "\n" . $bean->fetched_row['k_test_detail'];
                     $bean->k_old_test_detail = $oldTestDetail;
                 }
                 // Increment swap count
@@ -115,5 +113,6 @@ class bookingLogicHookClass
                 $contactsBean->save();
             }
         }
+        $bean->k_phone_no=trim($bean->k_phone_no);
     }
 }
