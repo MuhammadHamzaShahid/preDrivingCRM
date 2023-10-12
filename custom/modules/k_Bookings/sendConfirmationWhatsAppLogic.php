@@ -35,19 +35,43 @@ class sendBookingConfirmationWhatsAppMsg {
                     'broadcast_name' => 'string',
                     'parameters' => [
                         [
+                                "name" => "name",
+                                "value" => "$candidateName"
+                        ],
+                        [
+                                "name" => "license_number",
+                                "value" => "$drivingLicense"
+                        ],
+                        [
                                 "name" => "test_center",
                                 "value" => "$testCenter"
                         ],
                         [
-                                "name" => "date_time1",
-                                "value" => "$dateAndTime"
+                          "name" => "date_time",
+                          "value" => "$dateAndTime"
                         ],
                         [
-                                "name" => "name",
-                                "value" => "$buyerName"
-                        ]
-                    ],
-                    'template_name' => 'reminder_message'
+                          "name" => "ref_number",
+                          "value" => "$refNumber"
+                        ],
+                        [
+                          "name" => "last_date_to_cancel",
+                          "value" => "$dateToCancel"
+                        ],
+                        [
+                          "name" => "buyer_name",
+                          "value" => "$buyerName"
+                        ],
+                        [
+                          "name" => "total_amount",
+                          "value" => "$totalAmount"
+                        ],
+                        [
+                          "name" => "checkout_url",
+                          "value" => "$paymentLink"
+                        ],
+                      ],
+                    'template_name' => 'send_whatsapp_booking_msg'
                 ]),
                 CURLOPT_HTTPHEADER => [
                     "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwZGFjNDQwNi1jNGZlLTRkMTItODQ4Ni04ZDE5OWI3NWZiZTgiLCJ1bmlxdWVfbmFtZSI6ImluZm9AcHJlZHJpdmluZy5jby51ayIsIm5hbWVpZCI6ImluZm9AcHJlZHJpdmluZy5jby51ayIsImVtYWlsIjoiaW5mb0BwcmVkcml2aW5nLmNvLnVrIiwiYXV0aF90aW1lIjoiMTAvMTEvMjAyMyAwNDoxNzoyMSIsImRiX25hbWUiOiIxMTUxNTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBVE9SIiwiZXhwIjoyNTM0MDIzMDA4MDAsImlzcyI6IkNsYXJlX0FJIiwiYXVkIjoiQ2xhcmVfQUkifQ.HbOMjn70Hy5rFN5QbBVoovq7_YRfV0hHfm85t_0UvmU",
