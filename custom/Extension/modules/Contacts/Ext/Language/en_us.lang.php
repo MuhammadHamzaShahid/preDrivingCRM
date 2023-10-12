@@ -10,4 +10,5 @@ $mod_strings['LBL_K_UNPAID_AMOUNT'] = 'Unpaid Amount';
 $mod_strings['LBL_K_PAID_AMOUNT'] = 'Paid Amount';
 $mod_strings['LBL_K_REFUND_AMOUNT'] = 'Refund Amount';
 $mod_strings['LBL_K_CREDIT_AMOUNT'] = 'Credit Amount';
+$mod_strings['LBL_LAST_NAME'] = 'Name';
 
