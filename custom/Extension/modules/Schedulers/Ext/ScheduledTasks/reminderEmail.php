@@ -6,7 +6,7 @@ array_push($job_strings, 'reminderEmail');
 function reminderEmail()
 {
     global $current_user,$db;
-    $result = $db->query("SELECT id, name, k_buyer_name, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct' AND CAST(k_date_and_time AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_email='0' AND k_transaction_type='Unpaid' AND deleted='0' ");
+    $result = $db->query("SELECT id, name, k_buyer_name, k_email, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct' AND CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_email='0' AND k_transaction_type='Unpaid' AND deleted='0' ");
     while ($row = $db->fetchByAssoc($result)) {
         $id = $row['id'];
         $emailAddress = $row['k_email'];
@@ -52,7 +52,7 @@ function smtp_mailer($to, $subject, $msg)
     if (!$mail->Send()) {
         echo $mail->ErrorInfo;
     } else {
-        return 'Sent';
+        echo 'Sent';
     }
 }
 
