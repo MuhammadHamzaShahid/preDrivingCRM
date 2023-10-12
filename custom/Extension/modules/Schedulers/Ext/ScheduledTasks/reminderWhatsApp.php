@@ -28,12 +28,12 @@ function reminderWhatsApp()
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $result = curl_exec($ch);
-        if (curl_errno($curl)) {
-          echo 'Error:' . curl_error($curl);
+        if (curl_errno($ch)) {
+          echo 'Error:' . curl_error($ch);
         } else{
         $db->query("UPDATE k_bookings SET send_confirmation_whatsApp='1' WHERE id='$id'");
         }
-        curl_close($curl);
+        curl_close($ch);
       }
     }
     catch (exception $e) {
