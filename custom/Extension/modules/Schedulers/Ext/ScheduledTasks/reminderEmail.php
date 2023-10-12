@@ -27,33 +27,34 @@ function reminderEmail()
     }
     return true;
 }
-    function smtp_mailer($to, $subject, $msg)
-    {
-        $mail = new PHPMailer();
-        $mail->IsSMTP();
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Host = "smtp.hostinger.com";
-        $mail->Port = 465;
-        $mail->IsHTML(true);
-        $mail->CharSet = 'UTF-8';
-        // $mail->SMTPDebug = 2;
-        $mail->Username = "mailto:sales@predriving.co.uk";
-        $mail->Password = "Sales@2023";
-        $mailto:mail->setfrom("sales@predriving.co.uk");
-        $mail->Subject = $subject;
-        $mail->Body = $msg;
-        $mail->AddAddress($to);
-        $mail->SMTPOptions = array('ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => false
-        ));
-        if (!$mail->Send()) {
-            echo $mail->ErrorInfo;
-        } else {
-            return 'Sent';
-        }
+function smtp_mailer($to, $subject, $msg)
+{
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'ssl';
+    $mail->Host = "smtp.hostinger.com";
+    $mail->Port = 465;
+    $mail->IsHTML(true);
+    $mail->CharSet = 'UTF-8';
+    // $mail->SMTPDebug = 2;
+    $mail->Username = "sales@predriving.co.uk";
+    $mail->Password = "Sales@2023";
+    $mail->setfrom("sales@predriving.co.uk");
+    $mail->Subject = $subject;
+    $mail->Body = $msg;
+    $mail->AddAddress($to);
+    $mail->SMTPOptions = array('ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => false
+    ));
+    if (!$mail->Send()) {
+        echo $mail->ErrorInfo;
+    } else {
+        return 'Sent';
     }
+}
+
 
 ?>
