@@ -1,13 +1,13 @@
 <?php
 require_once('vendor/autoload.php');
 
-array_push($job_strings, 'sendWhatsappReminder');
-function sendWhatsappReminder()
+array_push($job_strings, 'reminderWhatsApp');
+function reminderWhatsApp()
 {
   global $current_user,$db;
     try{
-      $result = $db->query("SELECT id, k_phone_no, k_buyer_name, k_test_center, k_date_and_time FROM k_bookings WHERE DATE(k_last_date) = CURDATE() AND k_transaction_type = 'Unpaid'");
-      while ($row = $db->fetchByAssoc($result)){
+      $result = $db->query("SELECT id, k_phone_no, name, k_buyer_name, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct'  AND CAST(k_date_and_time AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_whatsApp='0' AND k_transaction_type='Unpaid'");
+        while ($row = $db->fetchByAssoc($result)){
         $name = $row['k_buyer_name'];
         $testCenter = $row['k_test_center'];
         $dateAndTime = $row['k_date_and_time'];
@@ -28,10 +28,12 @@ function sendWhatsappReminder()
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $result = curl_exec($ch);
-        if (curl_errno($ch)) {
-            echo 'Error:' . curl_error($ch);
+        if (curl_errno($curl)) {
+          echo 'Error:' . curl_error($curl);
+        } else{
+        $db->query("UPDATE k_bookings SET send_confirmation_whatsApp='1' WHERE id='$id'");
         }
-        curl_close($ch);
+        curl_close($curl);
       }
     }
     catch (exception $e) {

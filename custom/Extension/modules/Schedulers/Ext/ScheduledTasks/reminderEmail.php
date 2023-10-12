@@ -2,8 +2,8 @@
 
 require_once ('custom/modules/k_Bookings/smtp/PHPMailerAutoload.php');
 
-array_push($job_strings, 'confirmationEmail');
-function confirmationEmail()
+array_push($job_strings, 'reminderEmail');
+function reminderEmail()
 {
     global $current_user,$db;
     $result = $db->query("SELECT id, name, k_buyer_name, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct' AND CAST(k_date_and_time AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_email='0' AND k_transaction_type='Unpaid'");
@@ -20,38 +20,7 @@ function confirmationEmail()
             $refNumber = $row['k_driving_test_ref_no'];
             $totalAmount = $row['total'];
             $paymentLink = $row['stripe_checkout_url'];
-            $message = <<<EOD
-            Please check the details below are correct as per your request. Any future changes to the booking may be subject to a £20 admin fee.
-            
-            Candidate Name
-            $candidateName
-            Driving Licence number
-            $drivingLicense
-            
-            Test Centre
-            $testCenter
-            Date and Time
-            $dateAndTime
-            
-            Driving test reference number:
-            $refNumber
-            Last date to cancel
-            $dateToCancel
-            
-            Buyer's Name
-            $buyerName
-            
-            Total Amount
-            $totalAmount
-            
-            Thank you for booking with us.
-            The booking will be confirmed once the payment is received.
-            Please confirm the booking on https://www.gov.uk/change-driving-test
-            All the best on the test.
-
-            Payment Link
-            $paymentLink
-            EOD;
+            $message = "Hi $buyerName, this is a reminder for your upcoming driving test on $dateAndTime at $testCenter Driving test centre. If you wish to make changes, today is the last day to make any changes. We highly advised to login to the student portal and check all the details are correct and upto date. This is important because in the unlikely event that test gets moved you will be notified and it will save you money and time.";
             smtp_mailer($emailAddress, 'Confirmation Email', $message);
             $db->query("UPDATE k_bookings SET send_confirmation_email='1' WHERE id='$id'");
         }
