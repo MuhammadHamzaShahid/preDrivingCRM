@@ -6,8 +6,8 @@ function reminderWhatsApp()
 {
   global $current_user,$db;
     try{
-      $result = $db->query("SELECT id, k_phone_no, name, k_buyer_name, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct'  AND CAST(k_date_and_time AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_whatsApp='0' AND k_transaction_type='Unpaid' AND deleted='0' ");
-        while ($row = $db->fetchByAssoc($result)){
+      $result = $db->query("SELECT id, k_phone_no, name, k_buyer_name, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct'  AND CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_whatsApp='0' AND k_transaction_type='Unpaid' AND deleted='0' ");
+      while ($row = $db->fetchByAssoc($result)){
         $name = $row['k_buyer_name'];
         $testCenter = $row['k_test_center'];
         $dateAndTime = $row['k_date_and_time'];
