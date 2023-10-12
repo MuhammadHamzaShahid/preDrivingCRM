@@ -14,6 +14,9 @@ class sendBookingConfirmationWhatsAppMsg {
                 $dateAndTime = $bean->k_date_and_time;
                 $dateToCancel = $bean->k_last_date;
                 $drivingLicense = $bean->k_license_no;
+                if($drivingLicense==""){
+                  $drivingLicense="string";
+                }
                 $refNumber = $bean->k_driving_test_ref_no;
                 $totalAmount = $bean->total;
                 $paymentLink = $bean->stripe_checkout_url;
@@ -78,12 +81,9 @@ class sendBookingConfirmationWhatsAppMsg {
                     "content-type: text/json"
                 ],
                 ]);
-
                 $response = curl_exec($curl);
                 $err = curl_error($curl);
-
                 curl_close($curl);
-
                 if ($err) {
                 echo "cURL Error #:" . $err;
                 } else {
