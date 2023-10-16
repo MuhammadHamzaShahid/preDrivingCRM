@@ -34,7 +34,7 @@ class sendBookingConfirmationEmail {
     public function sendBookingEmail($bean, $event, $arguments)
     {
         global $current_user,$db;
-        if(empty($bean->fetched_row) || $bean->fetched_row['k_email']!=$bean->k_email){
+        if($bean->fetched_row['k_email']!=$bean->k_email){
             $emailAddress = $bean->k_email;
             if($emailAddress!=''){
                 $name =$bean->k_buyer_name;

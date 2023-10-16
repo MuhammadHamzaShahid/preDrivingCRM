@@ -7,5 +7,5 @@ $dictionary['k_Bookings']['fields']['k_email'] = array(
     'len' => '255',
     'placeholder' => "email@example.com",
     'audited' => true,
-    'required' => true,
+    'required' => false,
 );

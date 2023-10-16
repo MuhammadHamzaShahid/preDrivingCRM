@@ -4,6 +4,6 @@ $dictionary['k_Bookings']['fields']['k_status'] = array(
     'vname' => 'LBL_K_STATUS',
     'type' => 'enum',
     'options' => 'k_status_list',
-    'required' => false,
+    'required' => true,
     'audited' => true,
 );

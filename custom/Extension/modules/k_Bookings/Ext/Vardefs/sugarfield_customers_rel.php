@@ -26,7 +26,7 @@ $dictionary['k_Bookings']['fields']['contacts_name'] = array(
     'isnull' => 'true',
     'module' => 'Contacts',
     'source' => 'non-db',
-    'required' => true,
+    'required' => false,
     'audited' => true,
 );
 //link
