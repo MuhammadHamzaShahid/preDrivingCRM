@@ -11,7 +11,7 @@ $dictionary['k_Bookings']['fields']['accounts_id'] = array(
     'dbType' => 'id',
     'reportable' => true,
     'duplicate_merge' => 'disabled',
-    'required' => false,
+    'required' => true,
 );
 //name
 $dictionary['k_Bookings']['fields']['accounts_name'] = array(

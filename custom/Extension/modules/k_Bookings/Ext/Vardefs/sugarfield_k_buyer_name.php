@@ -6,5 +6,5 @@ $dictionary['k_Bookings']['fields']['k_buyer_name'] = array(
     'type' => 'varchar',
     'len' => '255',
     'audited' => true,
-    'required' => true,
+    'required' => false,
 );
