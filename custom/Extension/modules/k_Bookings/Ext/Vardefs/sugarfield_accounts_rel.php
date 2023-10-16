@@ -25,7 +25,7 @@ $dictionary['k_Bookings']['fields']['accounts_name'] = array(
     'isnull' => 'true',
     'module' => 'Accounts',
     'source' => 'non-db',
-    'required' => false,
+    'required' => true,
     'audited' => true,
 );
 //link
