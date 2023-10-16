@@ -36,6 +36,10 @@ class bookingLogicHookClass
                     $bean->k_last_date =  $lastDateToCancelF;
                     $bean->name = $candidateName;
                     $bean->test_fee = $totalAmount;
+                    if($totalAmount==''){
+                        echo '<script>alert("Amount From Test Details Are Missing!")</script>'; 
+                        die();
+                    }
                 }
             }
         }
