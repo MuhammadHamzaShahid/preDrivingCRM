@@ -11,7 +11,7 @@ class sendBookingConfirmationWhatsAppMsg {
               $phone_mobile = $bean->k_phone_no;
               if($phone_mobile!=''){
                 $candidateName = $bean->name;
-                $buyerName = $bean->k_buyer_name;
+                $buyerName = $bean->contacts_name;
                 $testCenter = $bean->k_test_center;
                 $dateAndTime = $bean->k_date_and_time;
                 $dateToCancel = $bean->k_last_date;

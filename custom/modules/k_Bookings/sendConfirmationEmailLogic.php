@@ -37,7 +37,7 @@ class sendBookingConfirmationEmail {
         if($bean->fetched_row['k_email']!=$bean->k_email){
             $emailAddress = $bean->k_email;
             if($emailAddress!=''){
-                $name =$bean->k_buyer_name;
+                $name =$bean->contacts_name;
                 $dateAndTime = $bean->k_date_and_time;
                 $dateTimeF= date('D d M Y H:i',strtotime($dateAndTime)); 
                 $lastDate = $bean->k_last_date;
