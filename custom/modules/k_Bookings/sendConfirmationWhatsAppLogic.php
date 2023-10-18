@@ -7,8 +7,8 @@ class sendBookingConfirmationWhatsAppMsg {
     {
         global $current_user,$db;
         try{
-            if($bean->fetched_row['phone_mobile']!=$bean->phone_mobile){
-              $phone_mobile = $bean->phone_mobile;
+            if($bean->fetched_row['k_phone_no']!=$bean->k_phone_no){
+              $phone_mobile = $bean->k_phone_no;
               if($phone_mobile!=''){
                 $candidateName = $bean->name;
                 $buyerName = $bean->k_buyer_name;
