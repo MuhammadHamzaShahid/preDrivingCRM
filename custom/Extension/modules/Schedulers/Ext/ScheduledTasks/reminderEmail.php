@@ -13,18 +13,20 @@ function reminderEmail()
         if($emailAddress!=''){
             $candidateName = $row['name'];
             $contactId = $row['contacts_id'];
-            $contactBean = BeanFactory::getBean("Contacts", $contactId);
-            $buyerName = $contactBean->full_name;
-            $testCenter = $row['k_test_center'];
-            $dateAndTime = $row['k_date_and_time'];
-            $dateToCancel = $row['k_last_date'];
-            $drivingLicense = $row['k_license_no'];
-            $refNumber = $row['k_driving_test_ref_no'];
-            $totalAmount = $row['total'];
-            $paymentLink = $row['stripe_checkout_url'];
-            $message = "Hi $buyerName, this is a reminder for your upcoming driving test on $dateAndTime at $testCenter Driving test centre. If you wish to make changes, today is the last day to make any changes. We highly advised to login to the student portal and check all the details are correct and upto date. This is important because in the unlikely event that test gets moved you will be notified and it will save you money and time.";
-            smtp_mailer($emailAddress, 'Confirmation Email', $message);
-            $db->query("UPDATE k_bookings SET send_confirmation_email='1' WHERE id='$id'");
+            if($contactId!=''){
+                $contactBean = BeanFactory::getBean("Contacts", $contactId);
+                $buyerName = $contactBean->full_name;
+                $testCenter = $row['k_test_center'];
+                $dateAndTime = $row['k_date_and_time'];
+                $dateToCancel = $row['k_last_date'];
+                $drivingLicense = $row['k_license_no'];
+                $refNumber = $row['k_driving_test_ref_no'];
+                $totalAmount = $row['total'];
+                $paymentLink = $row['stripe_checkout_url'];
+                $message = "Hi $buyerName, this is a reminder for your upcoming driving test on $dateAndTime at $testCenter Driving test centre. If you wish to make changes, today is the last day to make any changes. We highly advised to login to the student portal and check all the details are correct and upto date. This is important because in the unlikely event that test gets moved you will be notified and it will save you money and time.";
+                smtp_mailer($emailAddress, 'Confirmation Email', $message);
+                $db->query("UPDATE k_bookings SET send_confirmation_email='1' WHERE id='$id'");
+            }
         }
     }
     return true;
