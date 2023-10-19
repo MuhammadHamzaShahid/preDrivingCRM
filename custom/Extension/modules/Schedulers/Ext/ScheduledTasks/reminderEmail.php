@@ -12,8 +12,14 @@ function reminderEmail()
         $emailAddress = $row['k_email'];
         $emailAddress = 'busbuchoo@gmail.com';
         if($emailAddress!=''){
+            $contactId = $row['contacts_id'];
+            if($contactId!=''){
+                $contactBean = BeanFactory::getBean("Contacts", $contactId);
+                $buyerName = $contactBean->full_name;
+            }else{
+                $buyerName = '';
+            }
             $candidateName = $row['name'];
-            $buyerName = $row['k_buyer_name'];
             $testCenter = $row['k_test_center'];
             $dateAndTime = $row['k_date_and_time'];
             $dateToCancel = $row['k_last_date'];
@@ -52,9 +58,9 @@ function smtp_mailer($to, $subject, $msg)
         'allow_self_signed' => false
     ));
     if (!$mail->Send()) {
-        echo $mail->ErrorInfo;
+        // echo $mail->ErrorInfo;
     } else {
-        echo 'Sent';
+        // echo 'Sent';
     }
 }
 

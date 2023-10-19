@@ -4,8 +4,8 @@ class whatsAppMessagesToCReateLeadClass{
         public function whatsAppMessagesToCReateLeadMethod(SugarBean $bean, $event, $arguments)
         {
             global $db;
-            $whatsAppSms = $bean->k_test_detail;
-            if (empty($bean->fetched_row) && !isset($_REQUEST['massupdate']) && $bean->k_buyer_name='received_whatsapp_msg'){
+            $whatsAppSms = $bean->k_whatsapp_test_details;
+            if (empty($bean->fetched_row) && !isset($_REQUEST['massupdate']) && $bean->k_full_name='received_whatsapp_msg'){
                 if(!empty($whatsAppSms)){
                     $data=explode(',',$whatsAppSms);
                     $text = $data[5].' '.$data[6].' '.$data[7];
@@ -39,28 +39,13 @@ class whatsAppMessagesToCReateLeadClass{
                     $testDateExplode2=explode("Thank you", $testDateExplode[1]);   
                     $testDateExplodeFinal=str_replace('\n\n', '', $testDateExplode2[0]);
                     //putting values in related sugarfields
-                    $bean->name = $firstNameFinal;
-                    $bean->k_license_no = $drivingLicenseNumberFinal;
+                    $bean->k_full_name = $firstNameFinal;
+                    $bean->name = $drivingLicenseNumberFinal;
                     $bean->k_email = $emailExplodeFinal;
                     $bean->k_phone_no = $phoneNumberExplodeFinal;
-                    $bean->k_driving_test_ref_no = $theoryNumberExplodeFinal;
+                    $bean->theory = $theoryNumberExplodeFinal;
                     $bean->k_test_center = $testCenterExplodeFinal;
-                    $bean->k_date_and_time = $testDateExplodeFinal;
-                   
-                    
-                        // echo'<pre>';
-                        // var_dump($text);     
-                        // var_dump($data);     
-                        // var_dump($firstNameFinal);
-                        // var_dump($drivingLicenseNumberFinal);
-                        // var_dump($emailExplodeFinal);
-                        // var_dump($phoneNumberExplodeFinal);
-                        // var_dump($theoryNumberExplodeFinal);
-                        // var_dump($testCenterExplodeFinal);
-                        // var_dump($testDateExplodeFinal);
-
-                        // die();
-                    
+                    $bean->k_test_date = $testDateExplodeFinal;
             }
         }
     }
