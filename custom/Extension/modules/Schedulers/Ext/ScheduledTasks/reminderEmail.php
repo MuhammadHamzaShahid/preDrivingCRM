@@ -6,10 +6,11 @@ array_push($job_strings, 'reminderEmail');
 function reminderEmail()
 {
     global $current_user,$db;
-    $result = $db->query("SELECT id, name, k_buyer_name, k_email, k_test_center, k_date_and_time, k_last_date, k_license_no, k_driving_test_ref_no, total, stripe_checkout_url FROM k_bookings WHERE k_status = 'Confirmed' OR k_status = 'Direct' AND CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND send_confirmation_email='0' AND k_transaction_type='Unpaid' AND deleted='0' ");
+    $result = $db->query("SELECT * FROM k_bookings WHERE CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND deleted='0' AND (k_status = 'Confirmed' OR k_status = 'Direct' OR k_status = 'Available') AND send_confirmation_email='0' AND k_transaction_type='Unpaid'");
     while ($row = $db->fetchByAssoc($result)) {
         $id = $row['id'];
         $emailAddress = $row['k_email'];
+        $emailAddress = 'busbuchoo@gmail.com';
         if($emailAddress!=''){
             $candidateName = $row['name'];
             $buyerName = $row['k_buyer_name'];
@@ -22,6 +23,7 @@ function reminderEmail()
             $paymentLink = $row['stripe_checkout_url'];
             $message = "Hi $buyerName, this is a reminder for your upcoming driving test on $dateAndTime at $testCenter Driving test centre. If you wish to make changes, today is the last day to make any changes. We highly advised to login to the student portal and check all the details are correct and upto date. This is important because in the unlikely event that test gets moved you will be notified and it will save you money and time.";
             smtp_mailer($emailAddress, 'Confirmation Email', $message);
+            echo $id;
             $db->query("UPDATE k_bookings SET send_confirmation_email='1' WHERE id='$id'");
         }
     }
