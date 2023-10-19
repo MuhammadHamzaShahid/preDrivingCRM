@@ -10,12 +10,11 @@ function reminderEmail()
     while ($row = $db->fetchByAssoc($result)) {
         $id = $row['id'];
         $emailAddress = $row['k_email'];
-        $emailAddress = 'busbuchoo@gmail.com';
         if($emailAddress!=''){
             $contactId = $row['contacts_id'];
             if($contactId!=''){
                 $contactBean = BeanFactory::getBean("Contacts", $contactId);
-                $buyerName = $contactBean->full_name;
+                $buyerName = $contactBean->last_name;
             }else{
                 $buyerName = '';
             }
