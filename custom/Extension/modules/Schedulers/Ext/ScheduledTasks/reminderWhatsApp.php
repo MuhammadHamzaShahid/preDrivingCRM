@@ -10,7 +10,7 @@ function reminderWhatsApp()
         $contactId = $row['contacts_id'];
             if($contactId!=''){
                 $contactBean = BeanFactory::getBean("Contacts", $contactId);
-                $name = $contactBean->last_name;
+                $name = $contactBean->first_name.' '.$contactBean->last_name;
             }else{
                 $name = 'string';
             }

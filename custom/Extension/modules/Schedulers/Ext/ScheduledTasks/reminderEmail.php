@@ -14,7 +14,7 @@ function reminderEmail()
             $contactId = $row['contacts_id'];
             if($contactId!=''){
                 $contactBean = BeanFactory::getBean("Contacts", $contactId);
-                $buyerName = $contactBean->last_name;
+                $buyerName = $contactBean->first_name.' '.$contactBean->last_name;
             }else{
                 $buyerName = '';
             }
