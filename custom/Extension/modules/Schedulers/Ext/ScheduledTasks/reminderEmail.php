@@ -26,8 +26,8 @@ function reminderEmail()
             $refNumber = $row['k_driving_test_ref_no'];
             $totalAmount = $row['total'];
             $paymentLink = $row['stripe_checkout_url'];
-            $message = "Hi $buyerName, this is a reminder for your upcoming driving test on $dateAndTime at $testCenter Driving test centre. If you wish to make changes, today is the last day to make any changes. We highly advised to login to the student portal and check all the details are correct and upto date. This is important because in the unlikely event that test gets moved you will be notified and it will save you money and time.";
-            smtp_mailer($emailAddress, 'Confirmation Email', $message);
+            $message = "Hi $buyerName,\n This is a reminder that the named candidate $candidateName has their upcoming driving test on <strong>$dateAndTime</strong> at <strong>$testCenter</strong> Driving test centre. If you wish to make any changes, today will be the last day. We highly advise you to login to the student portal and check all the details are correct and up to date. This is important because in the unlikely event that test gets rescheduled, you will be notified saving you money and time.";
+            smtp_mailer($emailAddress, 'Reminder Email', $message);
             echo $id;
             $db->query("UPDATE k_bookings SET send_confirmation_email='1' WHERE id='$id'");
         }
