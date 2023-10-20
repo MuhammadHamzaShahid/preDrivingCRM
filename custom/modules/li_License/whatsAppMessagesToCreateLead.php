@@ -10,8 +10,6 @@ class whatsAppMessagesToCReateLeadClass{
                 $data=explode(',',$whatsAppSms);
                 $text = $data[5].' '.$data[6].' '.$data[7];
                 $data = preg_replace("/[^a-zA-Z0-9\s]+/", "", html_entity_decode($text, ENT_QUOTES));
-                var_dump($data);
-                // die();
                 if (str_starts_with($data, "textThank you for reaching out ")){
                     //Driving Test Request Details
                     //getting first name
@@ -44,19 +42,12 @@ class whatsAppMessagesToCReateLeadClass{
                     $testDateExplodeFinal=str_replace('\n\n', '', $testDateExplode2[0]);
                     //putting values in related sugarfields
                     $bean->k_full_name = $firstNameFinal;
-                    // $bean->name = $drivingLicenseNumberFinal;
+                    $bean->name = $drivingLicenseNumberFinal;
                     $bean->k_email = $emailExplodeFinal;
                     $bean->k_phone_no = $phoneNumberExplodeFinal;
                     $bean->theory = $theoryNumberExplodeFinal;
                     $bean->k_test_center = $testCenterExplodeFinal;
                     $bean->k_test_date = $testDateExplodeFinal;
-                    echo'<pre>';
-                    var_dump($firstNameFinal);
-                    var_dump($emailExplodeFinal);
-                    var_dump($phoneNumberExplodeFinal);
-                    var_dump($testCenterExplodeFinal);
-                    var_dump($testDateExplodeFinal);
-
                 }else if (str_starts_with($data, "textFull Name ")) {
                     //Driving Lesson Request Details
                     //getting first name
@@ -80,19 +71,14 @@ class whatsAppMessagesToCReateLeadClass{
                     $instructorExplode2=explode("nnThank you for sharing your details", $instructorExplode[1]);   
                     $instructorExplodeFinal=$instructorExplode2[0];
                     //putting values in related sugarfields
+                    $bean->name = "";
                     $bean->k_full_name = $fullNameFinal;
                     $bean->k_transmission = $transmissionExplodeFinal;
                     $bean->k_address = $addressExplodeFinal;
                     $bean->k_when_to_start = $whenToStartExplodeFinal;
                     $bean->k_instructor = $instructorExplodeFinal;
-
-                    echo'<pre>';
-                    var_dump($fullNameFinal);
-                    var_dump($transmissionExplodeFinal);
-                    var_dump($addressExplodeFinal);
-                    var_dump($whenToStartExplodeFinal);
-                    var_dump($instructorExplodeFinal);
-                    // die();
+                }else{
+                    die();
                 }
             }
         }
