@@ -1,7 +1,6 @@
 <?php
 
 require_once ('custom/modules/k_Bookings/smtp/PHPMailerAutoload.php');
-
 array_push($job_strings, 'reminderEmail');
 function reminderEmail()
 {
@@ -62,6 +61,5 @@ function smtp_mailer($to, $subject, $msg)
         // echo 'Sent';
     }
 }
-
 
 ?>
