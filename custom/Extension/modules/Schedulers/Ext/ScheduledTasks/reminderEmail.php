@@ -5,7 +5,7 @@ array_push($job_strings, 'reminderEmail');
 function reminderEmail()
 {
     global $current_user,$db;
-    $result = $db->query("SELECT * FROM k_bookings WHERE CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND deleted='0' AND (k_status = 'Confirmed' OR k_status = 'Direct' OR k_status = 'Available') AND send_confirmation_email='0' AND k_transaction_type='Unpaid'");
+    $result = $db->query("SELECT * FROM k_bookings WHERE CAST(k_last_date AS DATE) = CAST(CURDATE() AS DATE) AND deleted='0' AND (k_status = 'Confirmed' OR k_status = 'Direct') AND send_confirmation_email='0' AND k_transaction_type='Unpaid'");
     while ($row = $db->fetchByAssoc($result)) {
         $id = $row['id'];
         $emailAddress = $row['k_email'];
