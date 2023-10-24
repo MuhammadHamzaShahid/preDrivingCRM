@@ -26,6 +26,7 @@ class k_BookingsViewDetail extends ViewDetail
                 alert('Payment link copied to clipboard!');
             }
             function redirectToWatiChat(phoneNumber) {
+                debugger;
                 const data = JSON.stringify({
                     broadcast_name: 'string',
                     template_name: 'new_chat',
@@ -116,6 +117,9 @@ class k_BookingsViewDetail extends ViewDetail
         if ($phone_mobile != '') {
             $phone_mobileExp = explode('+', $phone_mobile);
             $phone_mobile = $phone_mobileExp[1];
+            if($phone_mobile==''){
+                $phone_mobile=$this->bean->k_phone_no;
+            }
             $status = $this->bean->k_status;
             $candidateName = $this->bean->name;
             $buyerName = $this->bean->contacts_name;
