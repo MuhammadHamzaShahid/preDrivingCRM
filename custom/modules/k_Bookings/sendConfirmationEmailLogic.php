@@ -60,6 +60,8 @@ if ($dateAndTime == "") {
 }
 if ($dateToCancel == "") {
     $dateToCancel = "string";
+}else{
+    $dateToCancel = date('D d M Y', strtotime($dateToCancel));
 }
 if ($drivingLicense == "") {
     $drivingLicense = "string";
@@ -100,7 +102,7 @@ if ($status == 'Available' || $status == 'On Hold') {
     $message .= "Please login to the DVSA website and update your detail. It is your responsibility to make sure your update the candidate details and you will be notified by the DVSA if there are changes made to your booking.<br><br>";
     $message .= "customerservices@dvsa.gov.uk<br><br>";
     $message .= "<h3> Bad weather on the day of your test:</h3>";
-    $message .= "Call Chingford Test Centre, if there's fog, ice, snow, flooding, or high winds on the day of your test. You'll be told whether your test can go ahead or not.<br><br>";
+    $message .= "Call <strong>$testCenter</strong> Test Centre, if there's fog, ice, snow, flooding, or high winds on the day of your test. You'll be told whether your test can go ahead or not.<br><br>";
     $message .= "We wish you success with your test.<br><br>";
     $message .= "If you have booked a test on behalf of someone else, you must draw their attention to this information about their data and privacy: <a href='https://www.gov.uk/government/publications/dvsa-privacy-notices/book-and-manage-your-driving-test-privacy-notice'> Book and manage your driving test: privacy notice - GOV.UK(https://www.gov.uk) </a><br><br>";
     $message .= "Driver and Vehicle Standards Agency<br>";
