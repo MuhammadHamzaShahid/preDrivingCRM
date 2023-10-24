@@ -7,10 +7,40 @@ class whatsAppMessagesToCReateLeadClass{
         $whatsAppSms = $bean->k_whatsapp_test_details;
         if (empty($bean->fetched_row) && !isset($_REQUEST['massupdate']) && $bean->k_full_name='received_whatsapp_msg'){
             if(!empty($whatsAppSms)){
-                $data=explode(',',$whatsAppSms);
-                $text = $data[5].' '.$data[6].' '.$data[7];
-                $data = preg_replace("/[^a-zA-Z0-9\s]+/", "", html_entity_decode($text, ENT_QUOTES));
-                if (str_starts_with($data, "textThank you for reaching out ")){
+                $dataExp=explode(',',$whatsAppSms);
+                $text = preg_replace("/[^a-zA-Z0-9]+/", "", html_entity_decode($dataExp[6], ENT_QUOTES));
+                $data = preg_replace("/[^a-zA-Z0-9\s]+/", "", html_entity_decode($dataExp[6], ENT_QUOTES));
+                if($text=="typetext"){
+                    $text = $dataExp[5];
+                    $text=explode('\n',$text);
+                    //Driving Test Request Details
+                    //getting first name
+                    $firstNameExplode=explode(':', $text[0]);
+                    $firstNameExplode2 = str_replace('quot;', '', $firstNameExplode[1]);
+                    $firstNameExplode3 = str_replace('&', '', $firstNameExplode2);
+                    $firstNameFinal=$firstNameExplode3;
+                    //getting  Driving License Number
+                    $drivingLicenseNumberFinal=$text[1];
+                    //getting Email
+                    $emailExplodeFinal=$text[2];
+                    //getting Phone Number
+                    $phoneNumberExplodeFinal=$text[3];
+                    //getting Theory Number or Application Reference
+                    $theoryNumberExplodeFinal=$text[3];
+                    //getting Preferred Test Centre
+                    $testCenterExplodeFinal=$text[4];
+                    //getting  Preferred Test Date
+                    $testDateExplodeFinal=$text[5];
+                    //putting values in related sugarfields
+                    $bean->k_full_name = $firstNameFinal;
+                    $bean->name = $drivingLicenseNumberFinal;
+                    $bean->k_email = $emailExplodeFinal;
+                    $bean->k_phone_no = $phoneNumberExplodeFinal;
+                    $bean->theory = $theoryNumberExplodeFinal;
+                    $bean->k_test_center = $testCenterExplodeFinal;
+                    $bean->k_test_date = $testDateExplodeFinal;
+                }
+                else if (str_starts_with($data, "textThank you for reaching out ")){
                     //Driving Test Request Details
                     //getting first name
                     $firstNameExplode=explode("n Full Name ", $data);
