@@ -102,12 +102,14 @@ function processBookingDashboard($sugar_smarty,$user_id=''){
                         $sugar_smarty->assign('CONFIRMEDBOOKINGCOUNT', $row['2']);
                         $sugar_smarty->assign('ONHOLDBOOKINGCOUNT', $row['3']);
                         $sugar_smarty->assign('CANCELLEDBOOKINGCOUNT', $row['4']);
+                        $sugar_smarty->assign('AVAILABLEBOOKINGCOUNT', $row['5']);
                         $allBookingsGraphArr=array(
                             'totalBookingCount' => $row['0'],
                             'directBookingCount' => $row['1'],
                             'confirmedBookingCount' => $row['2'],
                             'onholdBookingCount' => $row['3'],
                             'cancelledBookingCount' => $row['4'],
+                            'availableBookingCount' => $row['5'],
                         );
                     }
                     $allBookingsGraphArrJSON =  json_encode($allBookingsGraphArr);

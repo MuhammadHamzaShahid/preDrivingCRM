@@ -1,11 +1,12 @@
 ﻿var Dashboard = {
     allBookingsGraphData: function () {
         var bookings = [];
+        var availableBookingCount = { Name: 'Available', Total: allBookingsGraphData.availableBookingCount };
         var directBookingCount = { Name: 'Direct', Total: allBookingsGraphData.directBookingCount };
         var confirmedBookingCount = { Name: 'Confirmed', Total: allBookingsGraphData.confirmedBookingCount };
         var onholdBookingCount = { Name: 'On Hold', Total: allBookingsGraphData.onholdBookingCount };
         var cancelledBookingCount = { Name: 'Cancelled', Total: allBookingsGraphData.cancelledBookingCount };
-        bookings.push(directBookingCount); bookings.push(confirmedBookingCount); bookings.push(onholdBookingCount); bookings.push(cancelledBookingCount); 
+        bookings.push(availableBookingCount); bookings.push(directBookingCount); bookings.push(confirmedBookingCount); bookings.push(onholdBookingCount); bookings.push(cancelledBookingCount); 
         setTimeout(function () {
             var ctx = document.getElementById("allBookingsChartCanvas").getContext("2d");
             var labels = [];
@@ -13,7 +14,8 @@
             var coloR = [];
 
             for (var i = 0; i < bookings.length; i++) {
-                labels.push(bookings[i].Name);
+                label = bookings[i].Name + ' (' + bookings[i].Total + ')';
+                labels.push(label);
                 datas.push(bookings[i].Total);
                 coloR.push(Dashboard.dynamicColors());
             }
@@ -36,7 +38,7 @@
                     duration: 3000,
                 }
             };
-            if(allBookingsGraphData.directBookingCount==0 && allBookingsGraphData.confirmedBookingCount==0 && allBookingsGraphData.onholdBookingCount==0 && allBookingsGraphData.cancelledBookingCount==0) {
+            if(allBookingsGraphData.availableBookingCount==0 && allBookingsGraphData.directBookingCount==0 && allBookingsGraphData.confirmedBookingCount==0 && allBookingsGraphData.onholdBookingCount==0 && allBookingsGraphData.cancelledBookingCount==0) {
                 ctx.fillText("No Data Available", 100,80);
                 ctx.font="30px Comic Sans MS";
                 ctx.fillStyle = "red";
@@ -66,7 +68,8 @@
             var coloR = [];
 
             for (var i = 0; i < payments.length; i++) {
-                labels.push(payments[i].Name);
+                label = payments[i].Name + ' (' + payments[i].Total + ')';
+                labels.push(label);
                 datas.push(payments[i].Total);
                 coloR.push(Dashboard.dynamicColors());
             }
@@ -101,59 +104,6 @@
                 data: data,
                 options: {
                     maintainAspectRatio: false,
-                }
-            });
-        }, 200);
-    },
-    listingsLiveMonthlyGraphData: function () {
-        var ctx = document.getElementById("listingsAssignedVsConvertedChartCanvas");
-        var months=listingsLiveMonthlyGraphData.listingMonths;
-        var assigned=listingsLiveMonthlyGraphData.assignedListings;
-        var converted=listingsLiveMonthlyGraphData.convertedListings;
-
-        var assignedData = {
-            label: 'Created Listings',
-            data:  assigned.split(','),
-            // data: ["3", "10", "3"],
-            backgroundColor: Dashboard.dynamicColors(),
-            borderWidth: 0,
-        };
-        var convertedData = {
-            label: 'Live Listings',
-            data: converted.split(','),
-            // data: ["1", "8", "2"],
-            backgroundColor: Dashboard.dynamicColors(),
-            borderWidth: 0,
-        };
-        var listingsData = {
-            // labels: ["Oct", "Nov", "Dec"],
-            labels: months.split(','),
-            datasets: [assignedData, convertedData]
-        };
-        setTimeout(function () {
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: listingsData,
-                options: {
-                    responsive: false,
-                    animation: { 
-                        duration: 3000,
-                        xAxis: true,
-                        yAxis: true,
-                    },
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                barPercentage: 1,
-                                categoryPercentage: 0.6,
-                            }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
                 }
             });
         }, 200);
