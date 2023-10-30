@@ -1,3 +1,37 @@
+<!-- Custom Donut -->
+<div>
+    <div style="border-bottom: 5px solid red;"></div>
+    <h2 style="text-align:center;" id="chart_name"></h2>
+
+    <div class="row col-sm-10">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="from_date">From Date:</label>
+                <input type='date' class="form-control hover" id="from_date" placeholder="From Date"></input>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="to_date">To Date:</label>
+                <input type='date' class="form-control hover" id="to_date" placeholder="To Date"></input>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="customer_name">Customer Name:</label>
+                <select id="customer_name" name="customer_name" required>
+                    <option>-- Select Agent Name --</option>
+                </select>
+            </div>
+        </div>
+        <button id="submitdashDoghnut" type="button" onclick="doghnutApp();" class="btn btn-primary"
+            style="background-color:#e8c423; margin-top: 19px;">Submit</button>
+    </div>
+    <div id="chart">
+        <!-- <canvas id="myChart"></canvas> -->
+
+    </div>
+</div><br><br><br>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -264,38 +298,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Custom Donut -->
-    <div style="border-bottom: 5px solid red;"></div>
-    <h2 style="text-align:center;" id="chart_name"></h2>
-
-    <div class="row col-sm-10">
-        <div class="col-sm-3">
-            <div class="form-group">
-                <label for="from_date">From Date:</label>
-                <input type='date' class="form-control hover" id="from_date" placeholder="From Date"></input>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <label for="to_date">To Date:</label>
-                <input type='date' class="form-control hover" id="to_date" placeholder="To Date"></input>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <label for="customer_name">Customer Name:</label>
-                <select id="customer_name" name="customer_name" required>
-                    <option>-- Select Agent Name --</option>
-                </select>
-            </div>
-        </div>
-        <button id="submitdashDoghnut" type="button" onclick="doghnutApp();" class="btn btn-primary"
-            style="background-color:#e8c423; margin-top: 19px;">Submit</button>
-    </div>
-    <div id="chart">
-        <!-- <canvas id="myChart"></canvas> -->
-
     </div>
 
     <!-- dataPopup Modal -->
