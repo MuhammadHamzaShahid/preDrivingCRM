@@ -1,0 +1,273 @@
+<link rel="stylesheet" type="text/css" href="custom/include/UI/app-assets/vendors/css/forms/selects/select2.css"/>
+
+<script src="custom/include/UI/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+<script src="custom/include/UI/app-js/getOptionByHtml.js"></script>
+<script src="custom/include/UI/app-assets/vendors/js/jquery_331.js"></script>
+<!-- alert -->
+<script src="custom/include/UI/app-js/cdn/js/sweetalert2.all.min.js"></script>
+
+
+
+<!-- Body start -->
+<div class="container-fluid">
+  <!-- <div class="container-fluid"> -->
+    <div class="row mt-3">
+      <div  class="col-lg-12" style=" background-color: #4e555b; color: white; text-align: center; border-radius:5px; padding: 4px;"> View Activity  </div>
+    </div>
+  <!-- </div> -->
+  <form id='taskSearchForm'>
+    <div class="top-options row mt-4">
+      <div class="col-lg-3" style="padding: 0px 10px;">
+        <div class="row">
+          <div class="col-lg-4 col-md-4" style="margin-bottom: 5px;"><label style="font-size: 13px;">From Date</label></div>
+          <div class=" col-lg-8 col-md-8" style="margin-bottom: 5px;"> <input style="width: 100%;" type="date" name="from_date"></div>
+          <!-- security group id -->
+          <div class="col-lg-4 col-md-4" style="margin-bottom: 5px;"> <label class="form-control-label red" for="buyers">Buyer</label></div>
+          <div class=" col-lg-8 col-md-8" style="margin-bottom: 5px;">
+            <select
+            id="buyers_id"
+            name="buyers_name"
+            class="form-control mySelect"
+            style="width: 100%;"
+            multiple>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding: 0px 10px;">
+        <div class="row">
+          <!-- to date -->
+          <div class="col-lg-4"  style="margin-bottom: 5px;"> <label for="to_date">To Date</label></div>
+          <div class=" col-lg-8"  style="margin-bottom: 5px;"> <input style="width: 100%;" type="date" name="to_date" ></div>
+           
+          <!-- status -->
+          <div class="col-lg-4"  style="margin-bottom: 5px;"> <label class="form-control-label" for="status">Status</label></div>
+          <div class=" col-lg-8"  style="margin-bottom: 5px;">
+            <select
+            id="status_id"
+            name="status_name"
+            class="select2-bg form-control mySelect" multiple>
+            </select>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </form>
+      <!-- right data table -->
+    </div>
+      <div class="row">
+        <button type="submit" id="searchTasks" onclick="showBooking()" class=" btn btn-primary" >Search</button>
+        <button type="submit" id="reset_filter" onclick="form_reset()" class=" btn btn-primary">Reset Filter</button>
+      </div>
+      <!-- <div class="row"> -->
+          <!-- page size -->
+            <!-- <div class="col-lg-1" style=" font-size:15px"> <label>Page Size</label></div>
+              <div class="col-lg-2" >
+                <select id="page_size" style="width: 100%;" name="page_size">
+                    <option value=""></option>
+                    <option value="A4">A4</option>
+                    <option value="A3">A3</option>
+                    <option value="A6">A6</option>
+                    <option value="A2">A2</option>
+                </select>
+              </div> -->
+            <!-- export button -->
+            <!-- <div class=" col-lg-8"> <button class="btn btn-primary" >Export</button></div> -->
+      <!-- </div> -->
+      <hr>
+</div>
+<!-- bottom container -->
+<div class="bottom">
+    <div class="container-fluid">
+          <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#Bookings">Bookings</a></li>
+        </ul>
+
+        <div class="tab-content col-lg-12" style="position: relative;">
+            <div id="leads" class=" tab-pane fade in active">
+                <h3>Bookings</h3>
+            <table class="table table-striped table-bordered" style="padding: 5px;">
+              <thead>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Buyer Name</th>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Candidate Name</th>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Status</th>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Total Amount</th>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Modified Date</th>
+                <th class="table-bg" style="text-align: center;position: sticky;top: 58px;background-color: #7a7c7e;color:white;">Entered Date</th>
+              </thead>
+              <tbody id="bookings_data" style="height:200px; scroll-behavior: smooth; overflow:scroll;">
+              
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+</div>
+<!-- Body End -->
+<script>
+  $.fn.serializeObject = function() {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+      if (o[this.name]) {
+        if (!o[this.name].push) {
+          o[this.name] = [o[this.name]];
+        }
+        o[this.name].push(this.value || '');
+      } else {
+        o[this.name] = this.value || '';
+      }
+    });
+    return o;
+};
+$(document).ready(function(){
+//select2 js_Function for selection the value from dropdown and also searchable
+$("select").select2();
+});
+function reset_filter(){
+  $('#priority_id,#status_id').val('').trigger('change');
+
+}
+//ajax function for data
+function showBooking(){
+  var form_data = $('#taskSearchForm').serializeObject();
+  
+  //remove all tabs data 
+  // document.getElementById("taskSearchForm").reset();
+  $('#bookings_data tr').remove();
+  // $('#students_task_data tr').remove();
+  // $('#application_task_data tr').remove();
+  // $('#visa_task_data tr').remove();
+  //
+  $('#counter_table_right tr').remove();
+  
+  //sweat alert 2
+      // let timerInterval
+  Swal.fire({
+    title: 'Loading...!',
+    // html: 'I will close in <b></b> milliseconds.',
+  });
+  Swal.showLoading();
+//sweat alert 2
+  $.ajax({
+    type:"POST",
+    url:"index.php?module=k_Bookings&action=bookingDataManagement&sugar_body_only=true",
+    data:form_data,
+    contentType:"application/x-www-form-urlencoded",
+    dataType: "text",
+    async: true,
+    success: function(data){
+        var booking_data = JSON.parse(data);
+        for(var i=0; i< booking_data[0].Buyers.length; i++){
+            $('#bookings_data').append('<tr>' + '<td style="text-align:center;"> <a href="index.php?module=Contacts&action=DetailView&record='+ booking_data[0].Buyers[i].buyers_id +'">'+ booking_data[0].Buyers[i].buyers_name + '</a></td>' + '<td style="text-align:center;" >' + '<a href="index.php?module=k_Bookings&action=DetailView&record='+ booking_data[0].Buyers[i].id +'" style="text-decoration:none; cursor:pointer;">' + booking_data[0].Buyers[i].caandidate_name +'</a></td>'+ '<td style="text-align:center;">' + booking_data[0].Buyers[i].status + '</td>' + '<td style="text-align:center;">' + booking_data[0].Buyers[i].total_amount + '</td>' + '<td style="text-align:center;">' + booking_data[0].Buyers[i].date_modified + '</td>' + '<td style="text-align:center;">' + booking_data[0].Buyers[i].date_entered + '</td>' + '</tr>');
+          }
+        Swal.close();
+    // end count table data Rows
+      },
+    error: function (request, status, errorThrown) {
+          console.log(request + ' ' + status + ' ' + errorThrown);
+      }
+  });
+}
+function form_reset(){
+  document.getElementById("taskSearchForm").reset();
+  $('select').val('').trigger('change');
+}
+function openCommentsModal(id) {
+$('#cmnt_box').html("");
+record_id = id;
+var commentHTML = '';
+$.ajax({
+type: "POST",
+url: "index.php?module=Leads&action=tasksComments&sugar_body_only=true",
+data: { 'record_id': record_id },
+contentType: "application/x-www-form-urlencoded",
+dataType: "text",
+async: false,
+success: function (data) {
+var t_comments = JSON.parse(data);
+// console.log(t_comments);
+for (var i = 0; i < t_comments.length; i++) {
+commentHTML += '<div id="inner_comment" class="inner_comment"><div style="border-bottom:1px solid black;border-radius:5px 5px 0px 0px; color:white; background-color:#778590;"><h5 style="margin-left:5px;">' + t_comments[i].user + '<span style="color:white;font-size:12px; margin-left:5px; margin-top:5px;margin-right:5px; float:right;">' + t_comments[i].date + '</span></h5></div><div style="text-align:center;"><h3>' + t_comments[i].description + '</h3></div></div><br>';
+$('#cmnt_box').html(commentHTML);
+// console.log(t_comments.[i].description);
+}
+},
+error: function (request, status, errorThrown) {
+console.log(request + " " + status + " " + errorThrown);
+},
+
+});
+
+}
+
+function addComment() {
+var comment = $('#comment').val();
+parent_bean_id = record_id;
+module_name = module_sugar_grp1;
+$("#comment").val('');
+if (comment != '') {
+$.ajax({
+type: "POST",
+url: "index.php?module=Tasks&action=multipleComments&sugar_body_only=true",
+data: { 'parent_bean_id': parent_bean_id, 'module_name': module_name, 'comment': comment },
+contentType: "application/x-www-form-urlencoded",
+dataType: "text",
+async: false,
+success: function (data) {
+console.log("Success");
+// $("#show_comments").load(location.href + " #show_comments");
+},
+error: function (request, status, errorThrown) {
+console.log(request + " " + status + " " + errorThrown);
+},
+});
+}
+}
+</script>
+<script>
+    $(document).ready(function(){
+        localStorage.clear();
+        //all buyers
+        $.ajax({
+            type: "POST",
+            url: "dropDownData/getBuyers.php",
+            data: {},
+            success: function(result){
+              var selectedVal="";
+              var data = JSON.parse(result);
+              var allBuyers = data["0"].allBuyers;
+              var optionHTML = '<option value="-1" disabled >Select</option>';
+              for (key in allBuyers) {
+                if (selectedVal == allBuyers[key]["0"])
+                  optionHTML +=
+                    '<option value="' +
+                    allBuyers[key]["0"] +
+                    '">' +
+                    allBuyers[key]["1"] +
+                    "</option>";
+                else
+                  optionHTML +=
+                    '<option value="' +
+                    allBuyers[key]["0"] +
+                    '">' +
+                    allBuyers[key]["1"] +
+                    "</option>";
+              }
+              $("#buyers_id").html(optionHTML);
+              var optionHTML = '<option value="-1" disabled >Select</option>';
+              optionHTML += '<option value="Available">Available</option>';
+              optionHTML += '<option value="Direct">Direct</option>';
+              optionHTML += '<option value="Confirmed">Confirmed</option>';
+              optionHTML += '<option value="On Hold">On Hold</option>';
+              optionHTML += '<option value="Cancelled">Cancelled</option>';
+              $("#status_id").html(optionHTML);
+            },
+            error: function(result){
+                console.log('user data ajax failed');
+            }
+        });   
+    });
+</script>
